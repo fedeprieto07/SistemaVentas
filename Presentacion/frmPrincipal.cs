@@ -29,28 +29,7 @@ namespace Presentacion
         {
 
             InitializeComponent();
-            var c = GetAll(this);
-
-   
-
-
-            foreach (Control control in c)
-            {
-                if (control.Tag is null)
-                {
-                    control.Tag = "no usado";
-                }
-
-               
-                    ctrl.Add(control);
-                    MessageBox.Show(control.Tag.ToString());
-                
-
-
-
-                  
-                
-            }
+            
 
 
         }
@@ -84,9 +63,14 @@ namespace Presentacion
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
             IsMdiContainer = true;
+            AgregarControles();
             GestionUsuario();
             lenguaje(idioma);
-            MessageBox.Show(idioma);
+
+
+
+           
+
         }
         public IEnumerable<Control> GetAll(Control control)
         {
@@ -122,6 +106,31 @@ namespace Presentacion
             frm.Show();
         }
 
+        private void AgregarControles()
+        {
+            allItems.Add(salirToolStripMenuItem);
+            allItems.Add(MnuSistema);
+            allItems.Add(MnuAlmacen);
+            allItems.Add(artículosToolStripMenuItem);
+            allItems.Add(categoríasToolStripMenuItem);
+            allItems.Add(presentacionesToolStripMenuItem);
+            allItems.Add(ingresosToolStripMenuItem);
+            allItems.Add(proveedorToolStripMenuItem);
+            allItems.Add(MnuVentas);
+            allItems.Add(ventasToolStripMenuItem1);
+            allItems.Add(clientesToolStripMenuItem);
+            allItems.Add(MnuMantenimiento);
+            allItems.Add(trabajadoresToolStripMenuItem);
+            allItems.Add(MnuConsultas);
+            allItems.Add(ventasPorFechasToolStripMenuItem);
+            allItems.Add(comprasPorFechasToolStripMenuItem);
+            allItems.Add(stockDeArtículosToolStripMenuItem);
+            allItems.Add(MnuHerramientas);
+            allItems.Add(optionsToolStripMenuItem);
+
+
+
+        }
 
         private void GestionUsuario()
         {
@@ -230,19 +239,18 @@ namespace Presentacion
             {
 
 
-                foreach (Control x in ctrl)
+                foreach (ToolStripMenuItem x in allItems)
                 {
 
                     if (x.Tag.ToString() == d.Key.ToString())
                     {
 
-                        var ctn = this.Controls.Find(x.Name, true);
+                       
 
                         
-                            foreach (Control c in ctn)
-                            {
-                                c.Text = d.Value.ToString();
-                            }
+                           
+                                x.Text = d.Value.ToString();
+                           
 
 
                         }

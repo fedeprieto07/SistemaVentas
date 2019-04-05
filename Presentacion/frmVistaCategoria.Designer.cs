@@ -61,6 +61,7 @@
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(79, 28);
             this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Tag = "Buscsar";
             this.btnBuscar.Text = "&Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             // 
@@ -81,6 +82,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 0;
+            this.label2.Tag = "Nombre:";
             this.label2.Text = "Nombre:";
             // 
             // Eliminar
@@ -122,6 +124,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(540, 263);
             this.tabPage1.TabIndex = 0;
+            this.tabPage1.Tag = "Listado";
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
@@ -145,6 +148,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 29);
             this.label1.TabIndex = 6;
+            this.label1.Tag = "Categorias";
             this.label1.Text = "Categorías";
             // 
             // frmVistaCategoria

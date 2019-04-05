@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.chkEliminar = new System.Windows.Forms.CheckBox();
-            this.btnImprimir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -107,6 +106,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 29);
             this.label1.TabIndex = 15;
+            this.label1.Tag = "Ventas";
             this.label1.Text = "Ventas";
             // 
             // chkEliminar
@@ -117,21 +117,10 @@
             this.chkEliminar.Name = "chkEliminar";
             this.chkEliminar.Size = new System.Drawing.Size(62, 17);
             this.chkEliminar.TabIndex = 5;
+            this.chkEliminar.Tag = "Eliminar";
             this.chkEliminar.Text = "Eliminar";
             this.chkEliminar.UseVisualStyleBackColor = true;
             this.chkEliminar.CheckedChanged += new System.EventHandler(this.chkEliminar_CheckedChanged);
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.BackColor = System.Drawing.Color.Silver;
-            this.btnImprimir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImprimir.Location = new System.Drawing.Point(593, 28);
-            this.btnImprimir.Margin = new System.Windows.Forms.Padding(2);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(88, 28);
-            this.btnImprimir.TabIndex = 4;
-            this.btnImprimir.Text = "&Imprimir";
-            this.btnImprimir.UseVisualStyleBackColor = false;
             // 
             // btnEliminar
             // 
@@ -142,6 +131,7 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(81, 28);
             this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.Tag = "Eliminar";
             this.btnEliminar.Text = "&Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -155,6 +145,7 @@
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(79, 28);
             this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Tag = "Buscar";
             this.btnBuscar.Text = "&Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -167,6 +158,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 0;
+            this.label2.Tag = "Fecha Inicio:";
             this.label2.Text = "Fecha Inicio:";
             // 
             // tabPage2
@@ -178,6 +170,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(707, 347);
             this.tabPage2.TabIndex = 1;
+            this.tabPage2.Tag = "Mantenimiento";
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
@@ -233,6 +226,7 @@
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(95, 13);
             this.label16.TabIndex = 42;
+            this.label16.Tag = "Total Pagado:";
             this.label16.Text = "Total Pagado: S/. ";
             // 
             // dataListadoDetalle
@@ -291,6 +285,7 @@
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(62, 13);
             this.label14.TabIndex = 43;
+            this.label14.Tag = "Descuento:";
             this.label14.Text = "Descuento:";
             // 
             // txtStock_Actual
@@ -342,6 +337,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(71, 13);
             this.label15.TabIndex = 38;
+            this.label15.Tag = "Fecha Venc:";
             this.label15.Text = "Fecha Venc.:";
             // 
             // txtPrecio_Venta
@@ -362,6 +358,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(71, 13);
             this.label13.TabIndex = 36;
+            this.label13.Tag = "Precio Venta:";
             this.label13.Text = "Precio Venta:";
             // 
             // txtPrecio_Compra
@@ -382,6 +379,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(79, 13);
             this.label12.TabIndex = 34;
+            this.label12.Tag = "Precio Compra:";
             this.label12.Text = "Precio Compra:";
             // 
             // txtCantidad
@@ -402,6 +400,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
             this.label5.TabIndex = 32;
+            this.label5.Tag = "Cantidad:";
             this.label5.Text = "Cantidad:";
             // 
             // btnBuscarArticulo
@@ -423,6 +422,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 29;
+            this.label4.Tag = "Articulo:";
             this.label4.Text = "Artículo:";
             // 
             // txtArticulo
@@ -463,6 +463,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(27, 13);
             this.label11.TabIndex = 26;
+            this.label11.Tag = "IVA:";
             this.label11.Text = "IVA:";
             // 
             // txtCorrelativo
@@ -483,6 +484,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 13);
             this.label8.TabIndex = 24;
+            this.label8.Tag = "Numero:";
             this.label8.Text = "Número:";
             // 
             // cbTipo_Comprobante
@@ -517,6 +519,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(40, 13);
             this.label10.TabIndex = 21;
+            this.label10.Tag = "Fecha:";
             this.label10.Text = "Fecha:";
             // 
             // btnBuscarCliente
@@ -526,6 +529,7 @@
             this.btnBuscarCliente.Name = "btnBuscarCliente";
             this.btnBuscarCliente.Size = new System.Drawing.Size(55, 25);
             this.btnBuscarCliente.TabIndex = 18;
+            this.btnBuscarCliente.Tag = "Buscar";
             this.btnBuscarCliente.Text = "Buscar";
             this.btnBuscarCliente.UseVisualStyleBackColor = true;
             this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
@@ -558,6 +562,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 13);
             this.label7.TabIndex = 15;
+            this.label7.Tag = "Cliente:";
             this.label7.Text = "Cliente:";
             // 
             // txtSerie
@@ -578,6 +583,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 13);
             this.label6.TabIndex = 10;
+            this.label6.Tag = "Comprobante:";
             this.label6.Text = "Comprobante:";
             // 
             // btnCancelar
@@ -589,6 +595,7 @@
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(80, 27);
             this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.Tag = "Cancelar";
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -602,6 +609,7 @@
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(80, 27);
             this.btnGuardar.TabIndex = 7;
+            this.btnGuardar.Tag = "Guardar";
             this.btnGuardar.Text = "&Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -615,6 +623,7 @@
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(80, 26);
             this.btnNuevo.TabIndex = 6;
+            this.btnNuevo.Tag = "Nuevo";
             this.btnNuevo.Text = "&Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
@@ -637,6 +646,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 0;
+            this.label3.Tag = "Codigo:";
             this.label3.Text = "Código:";
             // 
             // lblTotal
@@ -683,7 +693,6 @@
             this.tabPage1.Controls.Add(this.dataListado);
             this.tabPage1.Controls.Add(this.lblTotal);
             this.tabPage1.Controls.Add(this.chkEliminar);
-            this.tabPage1.Controls.Add(this.btnImprimir);
             this.tabPage1.Controls.Add(this.btnEliminar);
             this.tabPage1.Controls.Add(this.btnBuscar);
             this.tabPage1.Controls.Add(this.label2);
@@ -693,6 +702,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(707, 347);
             this.tabPage1.TabIndex = 0;
+            this.tabPage1.Tag = "Listado";
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
@@ -705,6 +715,7 @@
             this.btnComprobante.Name = "btnComprobante";
             this.btnComprobante.Size = new System.Drawing.Size(103, 28);
             this.btnComprobante.TabIndex = 11;
+            this.btnComprobante.Tag = "Comprobante";
             this.btnComprobante.Text = "&Comprobante";
             this.btnComprobante.UseVisualStyleBackColor = false;
             this.btnComprobante.Click += new System.EventHandler(this.btnComprobante_Click);
@@ -717,6 +728,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 13);
             this.label9.TabIndex = 10;
+            this.label9.Tag = "Fecha Fin:";
             this.label9.Text = "Fecha Fin:";
             // 
             // dtFecha2
@@ -788,7 +800,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chkEliminar;
-        private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label label2;

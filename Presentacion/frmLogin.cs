@@ -145,5 +145,10 @@ namespace Presentacion
 
             }
         }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

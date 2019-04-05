@@ -94,6 +94,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(170, 29);
             this.label1.TabIndex = 9;
+            this.label1.Tag = "Trabajadores";
             this.label1.Text = "Trabajadores";
             // 
             // errorIcono
@@ -138,6 +139,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(46, 13);
             this.label13.TabIndex = 48;
+            this.label13.Tag = "Usuario:";
             this.label13.Text = "Usuario:";
             // 
             // label2
@@ -148,6 +150,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 47;
+            this.label2.Tag = "Acceso:";
             this.label2.Text = "Acceso:";
             // 
             // txtEmail
@@ -188,6 +191,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(52, 13);
             this.label11.TabIndex = 43;
+            this.label11.Tag = "Teléfono:";
             this.label11.Text = "Teléfono:";
             // 
             // txtNum_Documento
@@ -286,6 +290,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(29, 13);
             this.label9.TabIndex = 40;
+            this.label9.Tag = "DNI:";
             this.label9.Text = "DNI:";
             // 
             // dtFecha_Nacimiento
@@ -305,6 +310,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(96, 13);
             this.label8.TabIndex = 38;
+            this.label8.Tag = "Fecha Nacimiento:";
             this.label8.Text = "Fecha Nacimiento:";
             // 
             // cbSexo
@@ -328,6 +334,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(34, 13);
             this.label7.TabIndex = 36;
+            this.label7.Tag = "Sexo:";
             this.label7.Text = "Sexo:";
             // 
             // txtApellidos
@@ -348,6 +355,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 34;
+            this.label6.Tag = "Apellidos:";
             this.label6.Text = "Apellidos:";
             // 
             // txtDireccion
@@ -390,6 +398,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 30;
+            this.label5.Tag = "Dirección:";
             this.label5.Text = "Dirección:";
             // 
             // label4
@@ -400,6 +409,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 29;
+            this.label4.Tag = "Nombre:";
             this.label4.Text = "Nombre:";
             // 
             // label3
@@ -410,6 +420,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 28;
+            this.label3.Tag = "Código:";
             this.label3.Text = "Código:";
             // 
             // btnCancelar
@@ -421,6 +432,7 @@
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(80, 27);
             this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.Tag = "Cancelar";
             this.btnCancelar.Text = "&Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -434,6 +446,7 @@
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(80, 27);
             this.btnEditar.TabIndex = 8;
+            this.btnEditar.Tag = "Editar";
             this.btnEditar.Text = "E&ditar";
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -447,6 +460,7 @@
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(80, 27);
             this.btnGuardar.TabIndex = 7;
+            this.btnGuardar.Tag = "Guardar";
             this.btnGuardar.Text = "&Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -460,6 +474,7 @@
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(80, 26);
             this.btnNuevo.TabIndex = 6;
+            this.btnNuevo.Tag = "Nuevo";
             this.btnNuevo.Text = "&Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
@@ -473,6 +488,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(623, 327);
             this.tabPage2.TabIndex = 1;
+            this.tabPage2.Tag = "Mantenimiento";
             this.tabPage2.Text = "Mantenimiento";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
@@ -505,6 +521,7 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(81, 28);
             this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.Tag = "Eliminar";
             this.btnEliminar.Text = "&Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -518,6 +535,7 @@
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(79, 28);
             this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Tag = "Buscar";
             this.btnBuscar.Text = "&Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -537,6 +555,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(623, 327);
             this.tabPage1.TabIndex = 0;
+            this.tabPage1.Tag = "Listado";
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
@@ -559,9 +578,10 @@
             this.chkEliminar.Location = new System.Drawing.Point(10, 64);
             this.chkEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.chkEliminar.Name = "chkEliminar";
-            this.chkEliminar.Size = new System.Drawing.Size(80, 17);
+            this.chkEliminar.Size = new System.Drawing.Size(62, 17);
             this.chkEliminar.TabIndex = 5;
-            this.chkEliminar.Text = "chkEliminar";
+            this.chkEliminar.Tag = "Eliminar";
+            this.chkEliminar.Text = "Eliminar";
             this.chkEliminar.UseVisualStyleBackColor = true;
             this.chkEliminar.CheckedChanged += new System.EventHandler(this.chkEliminar_CheckedChanged);
             // 

@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.boxidioma = new System.Windows.Forms.ComboBox();
             this.BtnSalir = new System.Windows.Forms.Button();
             this.BtnIngresar = new System.Windows.Forms.Button();
             this.TxtPassword = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.boxidioma = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +64,23 @@
             this.groupBox1.Text = "Acceso al Sistema";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // boxidioma
+            // 
+            this.boxidioma.FormattingEnabled = true;
+            this.boxidioma.Items.AddRange(new object[] {
+            "espanol",
+            "ingles"});
+            this.boxidioma.Location = new System.Drawing.Point(7, 113);
+            this.boxidioma.Margin = new System.Windows.Forms.Padding(2);
+            this.boxidioma.Name = "boxidioma";
+            this.boxidioma.Size = new System.Drawing.Size(76, 21);
+            this.boxidioma.TabIndex = 21;
+            this.boxidioma.Text = "Espanol";
+            this.boxidioma.TextUpdate += new System.EventHandler(this.boxidioma_TextUpdate);
+            this.boxidioma.SelectedValueChanged += new System.EventHandler(this.boxidioma_SelectedValueChanged);
+            this.boxidioma.Click += new System.EventHandler(this.boxidioma_Click);
+            this.boxidioma.MouseClick += new System.Windows.Forms.MouseEventHandler(this.boxidioma_MouseClick);
+            // 
             // BtnSalir
             // 
             this.BtnSalir.BackColor = System.Drawing.Color.MediumBlue;
@@ -78,6 +95,7 @@
             this.BtnSalir.Tag = "Salir";
             this.BtnSalir.Text = "Salir";
             this.BtnSalir.UseVisualStyleBackColor = false;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // BtnIngresar
             // 
@@ -164,23 +182,6 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
-            // 
-            // boxidioma
-            // 
-            this.boxidioma.FormattingEnabled = true;
-            this.boxidioma.Items.AddRange(new object[] {
-            "espanol",
-            "ingles"});
-            this.boxidioma.Location = new System.Drawing.Point(7, 113);
-            this.boxidioma.Margin = new System.Windows.Forms.Padding(2);
-            this.boxidioma.Name = "boxidioma";
-            this.boxidioma.Size = new System.Drawing.Size(76, 21);
-            this.boxidioma.TabIndex = 21;
-            this.boxidioma.Text = "Espanol";
-            this.boxidioma.TextUpdate += new System.EventHandler(this.boxidioma_TextUpdate);
-            this.boxidioma.SelectedValueChanged += new System.EventHandler(this.boxidioma_SelectedValueChanged);
-            this.boxidioma.Click += new System.EventHandler(this.boxidioma_Click);
-            this.boxidioma.MouseClick += new System.Windows.Forms.MouseEventHandler(this.boxidioma_MouseClick);
             // 
             // frmLogin
             // 
