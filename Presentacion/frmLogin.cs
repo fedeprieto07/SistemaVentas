@@ -43,7 +43,7 @@ namespace Presentacion
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
             DataTable Datos = Negocio.nTrabajador.Login(this.TxtUsuario.Text, seg.encriptar(this.TxtPassword.Text));
-            MessageBox.Show(idioma);
+            
             //Evaluar si existe el Usuario
             if (Datos.Rows.Count == 0)
             {
@@ -72,6 +72,14 @@ namespace Presentacion
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
+            LlenarComboPresentacion();
+        }
+        private void LlenarComboPresentacion()
+        {
+            Traductor trad = new Traductor();
+            boxidioma.DataSource = trad.Mostrar(); 
+            boxidioma.ValueMember = "IdLenguaje";
+            boxidioma.DisplayMember = "Lenguaje";
 
         }
         public IEnumerable<Control> GetAll(Control control)
@@ -84,7 +92,7 @@ namespace Presentacion
 
         private void boxidioma_MouseClick(object sender, MouseEventArgs e)
         {
-            
+           
         }
 
         private void boxidioma_Click(object sender, EventArgs e)
@@ -94,18 +102,18 @@ namespace Presentacion
 
         private void boxidioma_TextUpdate(object sender, EventArgs e)
         {
-            
+           
         }
 
         private void boxidioma_SelectedValueChanged(object sender, EventArgs e)
         {
-            idioma = boxidioma.Text;
-            lenguaje(idioma);
+            
+            
         }
 
-        private void lenguaje(string idioma)
+        private void lenguaje(string Idioma)
         {
-            ResXResourceReader rsxr = new ResXResourceReader(@".\" + idioma + ".resx");
+            ResXResourceReader rsxr = new ResXResourceReader(@".\" + Idioma + ".resx");
 
             // Iterate through the resources and display the contents to the console.
             foreach (DictionaryEntry d in rsxr)
@@ -149,6 +157,12 @@ namespace Presentacion
         private void BtnSalir_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            idioma = boxidioma.Text;
+            lenguaje(boxidioma.Text);
         }
     }
 }

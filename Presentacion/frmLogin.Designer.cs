@@ -40,12 +40,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.boxidioma);
             this.groupBox1.Controls.Add(this.BtnSalir);
             this.groupBox1.Controls.Add(this.BtnIngresar);
@@ -57,7 +59,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(334, 153);
+            this.groupBox1.Size = new System.Drawing.Size(354, 194);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Tag = "Acceso al sistema";
@@ -67,9 +69,6 @@
             // boxidioma
             // 
             this.boxidioma.FormattingEnabled = true;
-            this.boxidioma.Items.AddRange(new object[] {
-            "espanol",
-            "ingles"});
             this.boxidioma.Location = new System.Drawing.Point(7, 113);
             this.boxidioma.Margin = new System.Windows.Forms.Padding(2);
             this.boxidioma.Name = "boxidioma";
@@ -183,11 +182,21 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(7, 139);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(76, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Seleccionar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 227);
+            this.ClientSize = new System.Drawing.Size(385, 266);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
@@ -215,5 +224,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ComboBox boxidioma;
+        private System.Windows.Forms.Button button1;
     }
 }

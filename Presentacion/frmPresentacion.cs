@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +18,8 @@ namespace Presentacion
 {
     public partial class frmPresentacion : Form
     {
-
+        List<Control> ctrl = new List<Control>();
+        List<TabPage> allItems = new List<TabPage>();
         private bool IsNuevo = false;
 
         private bool IsEditar = false;
@@ -41,7 +44,31 @@ namespace Presentacion
         {
             MessageBox.Show(mensaje, "Sistema de Ventas", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
+        private void ListarControles()
+        {
+            allItems.Add(tabPage1);
+            allItems.Add(tabPage2);
 
+            ctrl.Add(label1);
+            ctrl.Add(chkEliminar);
+            ctrl.Add(btnBuscar);
+            ctrl.Add(btnEliminar);
+
+            ctrl.Add(btnGuardar);
+
+            ctrl.Add(btnCancelar);
+            ctrl.Add(btnNuevo);
+            ctrl.Add(label2);
+            ctrl.Add(groupBox1);
+            ctrl.Add(label3);
+            ctrl.Add(label6);
+            ctrl.Add(label5);
+
+            ctrl.Add(label4);
+
+
+
+        }
         //Limpiar todos los controles del formulario
         private void Limpiar()
         {
@@ -92,7 +119,7 @@ namespace Presentacion
         {
             this.dataListado.DataSource = nPresentacion.Mostrar();
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text =  Convert.ToString(dataListado.Rows.Count);
         }
 
         //Método BuscarNombre
@@ -100,7 +127,7 @@ namespace Presentacion
         {
             this.dataListado.DataSource = nPresentacion.BuscarNombre(this.txtBuscar.Text);
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text = Convert.ToString(dataListado.Rows.Count);
         }
 
 
@@ -109,7 +136,7 @@ namespace Presentacion
         {
             this.Top = 0;
             this.Left = 0;
-
+            lenguaje(idioma);
             this.Mostrar();
             this.Habilitar(false);
             this.Botones();
@@ -291,6 +318,64 @@ namespace Presentacion
             {
                 this.dataListado.Columns[0].Visible = false;
             }
+        }
+        private void lenguaje(string idioma)
+        {
+
+            ResXResourceReader rsxr = new ResXResourceReader(@".\" + idioma + ".resx");
+            ListarControles();
+            // Iterate through the resources and display the contents to the console.
+            foreach (DictionaryEntry d in rsxr)
+            {
+
+                foreach (TabPage x in allItems)
+                {
+
+                    if (x.Tag.ToString() == d.Key.ToString())
+                    {
+
+
+
+
+
+                        x.Text = d.Value.ToString();
+
+
+
+                    }
+
+
+                }
+
+
+                foreach (Control x in ctrl)
+                {
+
+
+
+                    if (x.Tag.ToString() == d.Key.ToString())
+                    {
+
+
+
+
+
+                        x.Text = d.Value.ToString();
+
+
+
+                    }
+
+
+
+
+
+                }
+
+            }
+
+
+
         }
     }
 }

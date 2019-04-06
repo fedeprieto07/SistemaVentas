@@ -84,6 +84,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtArticulo = new System.Windows.Forms.TextBox();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label17 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
@@ -446,6 +447,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label17);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.dtFecha2);
             this.tabPage1.Controls.Add(this.dtFecha1);
@@ -528,7 +530,9 @@
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(35, 13);
             this.lblTotal.TabIndex = 6;
+            this.lblTotal.Tag = "Total de Registros";
             this.lblTotal.Text = "label3";
+            this.lblTotal.Click += new System.EventHandler(this.lblTotal_Click);
             // 
             // chkEliminar
             // 
@@ -627,6 +631,7 @@
             this.groupBox1.Size = new System.Drawing.Size(673, 315);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Tag = "Ingresos Almacen";
             this.groupBox1.Text = "Ingresos Almacén";
             // 
             // lblTotal_Pagado
@@ -747,6 +752,16 @@
             // 
             this.errorIcono.ContainerControl = this;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(291, 64);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(41, 13);
+            this.label17.TabIndex = 14;
+            this.label17.Tag = "Total de Registros";
+            this.label17.Text = "label17";
+            // 
             // frmIngreso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -831,5 +846,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtArticulo;
         private System.Windows.Forms.ErrorProvider errorIcono;
+        private System.Windows.Forms.Label label17;
     }
 }

@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +16,8 @@ namespace Presentacion
 {
     public partial class frmVistaArticulo_Ingreso : Form
     {
+        List<Control> ctrl = new List<Control>();
+        List<TabPage> allItems = new List<TabPage>();
         public string idioma;
         public frmVistaArticulo_Ingreso()
         {
@@ -22,7 +26,7 @@ namespace Presentacion
 
         private void frmVistaArticulo_Ingreso_Load(object sender, EventArgs e)
         {
-
+            lenguaje(idioma);
             this.Mostrar();
         }
 
@@ -44,7 +48,7 @@ namespace Presentacion
         {
             this.dataListado.DataSource = nArticulo.Mostrar();
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text =  Convert.ToString(dataListado.Rows.Count);
         }
 
         //Método BuscarNombre
@@ -52,7 +56,7 @@ namespace Presentacion
         {
             this.dataListado.DataSource = nArticulo.BuscarNombre(this.txtBuscar.Text);
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text = Convert.ToString(dataListado.Rows.Count);
         }
 
         private void dataListado_DoubleClick(object sender, EventArgs e)
@@ -63,6 +67,85 @@ namespace Presentacion
             par2 = Convert.ToString(this.dataListado.CurrentRow.Cells["nombre"].Value);
             form.setArticulo(par1, par2);
             this.Hide();
+        }
+
+        private void ListarControles()
+        {
+            allItems.Add(tabPage1);
+         
+            ctrl.Add(label1);
+         
+            ctrl.Add(btnBuscar);
+
+            ctrl.Add(label3);
+   
+
+      
+            ctrl.Add(label2);
+          
+
+ 
+
+
+
+        }
+        private void lenguaje(string idioma)
+        {
+
+            ResXResourceReader rsxr = new ResXResourceReader(@".\" + idioma + ".resx");
+            ListarControles();
+            // Iterate through the resources and display the contents to the console.
+            foreach (DictionaryEntry d in rsxr)
+            {
+
+                foreach (TabPage x in allItems)
+                {
+
+                    if (x.Tag.ToString() == d.Key.ToString())
+                    {
+
+
+
+
+
+                        x.Text = d.Value.ToString();
+
+
+
+                    }
+
+
+                }
+
+
+                foreach (Control x in ctrl)
+                {
+
+
+
+                    if (x.Tag.ToString() == d.Key.ToString())
+                    {
+
+
+
+
+
+                        x.Text = d.Value.ToString();
+
+
+
+                    }
+
+
+
+
+
+                }
+
+            }
+
+
+
         }
     }
 }

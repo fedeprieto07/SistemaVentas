@@ -31,7 +31,7 @@ namespace Presentacion
         {
             allItems.Add(tabPage1);
             allItems.Add(tabPage2);
-
+            ctrl.Add(label9);
             ctrl.Add(label1);
             ctrl.Add(chkEliminar);
             ctrl.Add(btnBuscar);
@@ -156,15 +156,16 @@ namespace Presentacion
         {
             this.dataListado.DataSource = nArticulo.Mostrar();
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text =  Convert.ToString(dataListado.Rows.Count);
         }
+
 
         //Método BuscarNombre
         private void BuscarNombre()
         {
             this.dataListado.DataSource = nArticulo.BuscarNombre(this.txtBuscar.Text);
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text =  Convert.ToString(dataListado.Rows.Count);
         }
 
         private void LlenarComboPresentacion()

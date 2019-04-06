@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,6 +19,8 @@ namespace Presentacion
         private bool IsEditar = false;
         public string idioma;
 
+        List<Control> ctrl = new List<Control>();
+        List<TabPage> allItems = new List<TabPage>();
         public frmProveedor()
         {
             InitializeComponent();
@@ -51,7 +55,37 @@ namespace Presentacion
             this.txtIdproveedor.Text = string.Empty;
 
         }
+        private void ListarControles()
+        {
+            allItems.Add(tabPage1);
+            allItems.Add(tabPage2);
+            ctrl.Add(label2);
+            ctrl.Add(label1);
+            ctrl.Add(chkEliminar);
+            ctrl.Add(btnBuscar);
+            ctrl.Add(btnEliminar);
 
+            ctrl.Add(btnGuardar);
+
+            ctrl.Add(btnCancelar);
+            ctrl.Add(btnNuevo);
+     
+            ctrl.Add(groupBox1);
+            ctrl.Add(label3);
+
+            ctrl.Add(label5);
+            ctrl.Add(label6);
+            ctrl.Add(label7);
+            ctrl.Add(label8);
+            ctrl.Add(label9);
+            ctrl.Add(label10);
+   
+
+            ctrl.Add(label4);
+
+
+
+        }
         //Habilitar los controles del formulario
         private void Habilitar(bool valor)
         {
@@ -100,7 +134,7 @@ namespace Presentacion
         {
             this.dataListado.DataSource = nProveedor.Mostrar();
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text = Convert.ToString(dataListado.Rows.Count);
         }
 
         //Método BuscarRazon_Social
@@ -108,7 +142,7 @@ namespace Presentacion
         {
             this.dataListado.DataSource = nProveedor.BuscarRazon_social(this.txtBuscar.Text);
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text =  Convert.ToString(dataListado.Rows.Count);
         }
 
         //Método BuscarNum_Documento
@@ -126,6 +160,7 @@ namespace Presentacion
             this.Mostrar();
             this.Habilitar(false);
             this.Botones();
+            lenguaje(idioma);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -310,6 +345,64 @@ namespace Presentacion
 
 
             this.tabControl1.SelectedIndex = 1;
+        }
+        private void lenguaje(string idioma)
+        {
+
+            ResXResourceReader rsxr = new ResXResourceReader(@".\" + idioma + ".resx");
+            ListarControles();
+            // Iterate through the resources and display the contents to the console.
+            foreach (DictionaryEntry d in rsxr)
+            {
+
+                foreach (TabPage x in allItems)
+                {
+
+                    if (x.Tag.ToString() == d.Key.ToString())
+                    {
+
+
+
+
+
+                        x.Text = d.Value.ToString();
+
+
+
+                    }
+
+
+                }
+
+
+                foreach (Control x in ctrl)
+                {
+
+
+
+                    if (x.Tag.ToString() == d.Key.ToString())
+                    {
+
+
+
+
+
+                        x.Text = d.Value.ToString();
+
+
+
+                    }
+
+
+
+
+
+                }
+
+            }
+
+
+
         }
     }
 }

@@ -86,6 +86,7 @@
             this.dtFecha2 = new System.Windows.Forms.DateTimePicker();
             this.dtFecha1 = new System.Windows.Forms.DateTimePicker();
             this.dataListado = new System.Windows.Forms.DataGridView();
+            this.label17 = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListadoDetalle)).BeginInit();
@@ -206,6 +207,7 @@
             this.groupBox1.Size = new System.Drawing.Size(673, 315);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Tag = "Ventas";
             this.groupBox1.Text = "Ventas";
             // 
             // lblTotal_Pagado
@@ -226,7 +228,7 @@
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(95, 13);
             this.label16.TabIndex = 42;
-            this.label16.Tag = "Total Pagado:";
+            this.label16.Tag = "Total Pagado";
             this.label16.Text = "Total Pagado: S/. ";
             // 
             // dataListadoDetalle
@@ -686,6 +688,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label17);
             this.tabPage1.Controls.Add(this.btnComprobante);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.dtFecha2);
@@ -768,6 +771,16 @@
             this.dataListado.TabIndex = 7;
             this.dataListado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataListado_CellContentClick);
             this.dataListado.DoubleClick += new System.EventHandler(this.dataListado_DoubleClick);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(278, 64);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(41, 13);
+            this.label17.TabIndex = 17;
+            this.label17.Tag = "Total de Registros";
+            this.label17.Text = "label17";
             // 
             // frmVenta
             // 
@@ -855,5 +868,6 @@
         private System.Windows.Forms.DateTimePicker dtFecha2;
         private System.Windows.Forms.DateTimePicker dtFecha1;
         private System.Windows.Forms.DataGridView dataListado;
+        private System.Windows.Forms.Label label17;
     }
 }

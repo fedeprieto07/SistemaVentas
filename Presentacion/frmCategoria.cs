@@ -96,7 +96,7 @@ namespace Presentacion
         {
             this.dataListado.DataSource = nCategoria.Mostrar();
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text =  Convert.ToString(dataListado.Rows.Count);
         }
 
         //Método BuscarNombre
@@ -104,7 +104,7 @@ namespace Presentacion
         {
             this.dataListado.DataSource = nCategoria.BuscarNombre(this.txtBuscar.Text);
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text =  Convert.ToString(dataListado.Rows.Count);
         }
 
 
@@ -125,7 +125,7 @@ namespace Presentacion
             ctrl.Add(label2);
             ctrl.Add(groupBox1);
             ctrl.Add(label3);
-           
+            ctrl.Add(label6);
             ctrl.Add(label5);
            
             ctrl.Add(label4);

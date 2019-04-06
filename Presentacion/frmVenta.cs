@@ -10,13 +10,17 @@ using System.Windows.Forms;
 using Entidades;
 using Negocio;
 using ArquitecturaBase;
+using System.Resources;
+using System.Collections;
 
 namespace Presentacion
 {
     public partial class frmVenta : Form
     {
-        List<Control> ctrl = new List<Control>();
+        
 
+        List<Control> ctrl = new List<Control>();
+        List<TabPage> allItems = new List<TabPage>();
         private bool IsNuevo = false;
         public int Idtrabajador;
         private DataTable dtDetalle;
@@ -54,6 +58,7 @@ namespace Presentacion
             this.Habilitar(false);
             this.Botones();
             this.crearTabla();
+            lenguaje(idioma);
         }
 
         public static frmVenta GetInstancia()
@@ -176,7 +181,7 @@ namespace Presentacion
         {
             this.dataListado.DataSource = nVenta.Mostrar();
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text =  Convert.ToString(dataListado.Rows.Count);
         }
 
         //Método BuscarFechas
@@ -185,7 +190,7 @@ namespace Presentacion
             this.dataListado.DataSource = nVenta.BuscarFechas(this.dtFecha1.Value.ToString("dd/MM/yyyy"),
                 this.dtFecha2.Value.ToString("dd/MM/yyyy"));
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text =  Convert.ToString(dataListado.Rows.Count);
         }
 
         private void MostrarDetalle()
@@ -470,6 +475,100 @@ namespace Presentacion
             frmReporteFactura frm = new frmReporteFactura();
             frm.IdVenta = Convert.ToInt32(this.dataListado.CurrentRow.Cells["idventa"].Value);
             frm.ShowDialog();
+        }
+        private void ListarControles()
+        {
+            allItems.Add(tabPage1);
+            allItems.Add(tabPage2);
+
+            ctrl.Add(label1);
+            ctrl.Add(chkEliminar);
+            ctrl.Add(btnBuscar);
+            ctrl.Add(btnEliminar);
+            ctrl.Add(label17);
+            ctrl.Add(btnGuardar);
+
+            ctrl.Add(btnCancelar);
+            ctrl.Add(btnNuevo);
+            ctrl.Add(label2);
+            ctrl.Add(groupBox1);
+            ctrl.Add(label3);
+            ctrl.Add(btnComprobante);
+            ctrl.Add(label5);
+            ctrl.Add(label6);
+            ctrl.Add(label7);
+            ctrl.Add(label8);
+            ctrl.Add(label9);
+            ctrl.Add(label10);
+            ctrl.Add(label11);
+            ctrl.Add(label12);
+            ctrl.Add(label13);
+            ctrl.Add(label14);
+            ctrl.Add(label15);
+            ctrl.Add(label16);
+
+            ctrl.Add(label4);
+
+
+
+        }
+        private void lenguaje(string idioma)
+        {
+
+            ResXResourceReader rsxr = new ResXResourceReader(@".\" + idioma + ".resx");
+            ListarControles();
+            // Iterate through the resources and display the contents to the console.
+            foreach (DictionaryEntry d in rsxr)
+            {
+
+                foreach (TabPage x in allItems)
+                {
+
+                    if (x.Tag.ToString() == d.Key.ToString())
+                    {
+
+
+
+
+
+                        x.Text = d.Value.ToString();
+
+
+
+                    }
+
+
+                }
+
+
+                foreach (Control x in ctrl)
+                {
+
+
+
+                    if (x.Tag.ToString() == d.Key.ToString())
+                    {
+
+
+
+
+
+                        x.Text = d.Value.ToString();
+
+
+
+                    }
+
+
+
+
+
+                }
+
+            }
+
+
+
         }
     }
 }

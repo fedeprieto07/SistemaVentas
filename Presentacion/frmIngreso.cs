@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using Entidades;
 using Negocio;
 using ArquitecturaBase;
+using System.Resources;
+using System.Collections;
+
 namespace Presentacion
 {
     public partial class frmIngreso : Form
@@ -19,7 +22,8 @@ namespace Presentacion
         private DataTable dtDetalle;
         private decimal totalPagado = 0;
         public string idioma;
-
+        List<Control> ctrl = new List<Control>();
+        List<TabPage> allItems = new List<TabPage>();
         private static frmIngreso _instancia;
         Bitacora bit = new Bitacora();
         public static frmIngreso GetInstancia()
@@ -147,7 +151,7 @@ namespace Presentacion
         {
             this.dataListado.DataSource = nDetalle_Ingreso.Mostrar();
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text =  Convert.ToString(dataListado.Rows.Count);
         }
 
         //Método BuscarFechas
@@ -156,7 +160,7 @@ namespace Presentacion
             this.dataListado.DataSource = nDetalle_Ingreso.BuscarFechas(this.dtFecha1.Value.ToString("dd/MM/yyyy"),
                 this.dtFecha2.Value.ToString("dd/MM/yyyy"));
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text = Convert.ToString(dataListado.Rows.Count);
         }
 
         private void MostrarDetalle()
@@ -180,7 +184,42 @@ namespace Presentacion
             this.dataListadoDetalle.DataSource = this.dtDetalle;
 
         }
+        private void ListarControles()
+        {
+            allItems.Add(tabPage1);
+            allItems.Add(tabPage2);
 
+            ctrl.Add(label1);
+            ctrl.Add(chkEliminar);
+            ctrl.Add(btnBuscar);
+            ctrl.Add(btnEliminar);
+
+            ctrl.Add(btnGuardar);
+            
+            ctrl.Add(btnCancelar);
+            ctrl.Add(btnNuevo);
+            ctrl.Add(label2);
+            ctrl.Add(groupBox1);
+            ctrl.Add(label3);
+            ctrl.Add(label17);
+            ctrl.Add(label5);
+            ctrl.Add(label6);
+            ctrl.Add(label7);
+            ctrl.Add(label8);
+            ctrl.Add(label9);
+            ctrl.Add(label10);
+            ctrl.Add(label11);
+            ctrl.Add(label12);
+            ctrl.Add(label13);
+            ctrl.Add(label14);
+            ctrl.Add(label15);
+            ctrl.Add(label16);
+
+            ctrl.Add(label4);
+
+
+
+        }
 
         private void frmIngreso_Load(object sender, EventArgs e)
         {
@@ -190,6 +229,7 @@ namespace Presentacion
             this.Habilitar(false);
             this.Botones();
             this.crearTabla();
+            lenguaje(idioma);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -469,6 +509,71 @@ namespace Presentacion
         }
 
         private void txtCorrelativo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void lenguaje(string idioma)
+        {
+
+            ResXResourceReader rsxr = new ResXResourceReader(@".\" + idioma + ".resx");
+            ListarControles();
+            // Iterate through the resources and display the contents to the console.
+            foreach (DictionaryEntry d in rsxr)
+            {
+
+                foreach (TabPage x in allItems)
+                {
+
+                    if (x.Tag.ToString() == d.Key.ToString())
+                    {
+
+
+
+
+
+                        x.Text = d.Value.ToString();
+
+
+
+                    }
+
+
+                }
+
+
+                foreach (Control x in ctrl)
+                {
+
+
+
+                    if (x.Tag.ToString() == d.Key.ToString())
+                    {
+
+
+
+
+
+                        x.Text = d.Value.ToString();
+
+
+
+                    }
+
+
+
+
+
+                }
+
+            }
+
+
+
+        }
+
+        private void lblTotal_Click(object sender, EventArgs e)
         {
 
         }

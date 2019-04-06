@@ -123,6 +123,7 @@
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(95, 13);
             this.label16.TabIndex = 42;
+            this.label16.Tag = "Total Pagado:";
             this.label16.Text = "Total Pagado: S/. ";
             // 
             // btnBuscar

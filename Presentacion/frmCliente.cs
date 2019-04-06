@@ -51,7 +51,7 @@ namespace Presentacion
             ctrl.Add(chkEliminar);
             ctrl.Add(btnBuscar);
             ctrl.Add(btnEliminar);
-
+            ctrl.Add(label11);
             ctrl.Add(btnGuardar);
             ctrl.Add(btnEditar);
             ctrl.Add(btnCancelar);
@@ -146,7 +146,7 @@ namespace Presentacion
         {
             this.dataListado.DataSource = nCliente.Mostrar();
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text =  Convert.ToString(dataListado.Rows.Count);
         }
 
         //Método BuscarApellidos
@@ -154,7 +154,7 @@ namespace Presentacion
         {
             this.dataListado.DataSource = nCliente.BuscarApellidos(this.txtBuscar.Text);
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text = Convert.ToString(dataListado.Rows.Count);
         }
 
         //Método BuscarNum_Documento
@@ -162,7 +162,7 @@ namespace Presentacion
         {
             this.dataListado.DataSource = nCliente.BuscarNum_Documento(this.txtBuscar.Text);
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text =  Convert.ToString(dataListado.Rows.Count);
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

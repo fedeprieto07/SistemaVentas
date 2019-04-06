@@ -318,4 +318,7 @@
   <data name="Consultas" xml:space="preserve">
     <value>Queries</value>
   </data>
+  <data name="Total de Registros" xml:space="preserve">
+    <value>Total Entrys</value>
+  </data>
 </root>
