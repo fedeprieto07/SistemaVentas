@@ -36,6 +36,7 @@
             this.indexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarLenguajeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.TsCompras = new System.Windows.Forms.ToolStripButton();
             this.TsVentas = new System.Windows.Forms.ToolStripButton();
@@ -61,7 +62,6 @@
             this.ventasPorFechasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasPorFechasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockDeArtículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarLenguajeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -113,6 +113,14 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Tag = "Acerca de";
             this.aboutToolStripMenuItem.Text = "&Acerca de... ...";
+            // 
+            // agregarLenguajeToolStripMenuItem
+            // 
+            this.agregarLenguajeToolStripMenuItem.Name = "agregarLenguajeToolStripMenuItem";
+            this.agregarLenguajeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.agregarLenguajeToolStripMenuItem.Tag = "Agregar Lenguaje";
+            this.agregarLenguajeToolStripMenuItem.Text = "Agregar Lenguaje";
+            this.agregarLenguajeToolStripMenuItem.Click += new System.EventHandler(this.agregarLenguajeToolStripMenuItem_Click);
             // 
             // toolStrip
             // 
@@ -332,12 +340,6 @@
             this.stockDeArtículosToolStripMenuItem.Tag = "Stock de Articulos";
             this.stockDeArtículosToolStripMenuItem.Text = "Stock de Artículos";
             this.stockDeArtículosToolStripMenuItem.Click += new System.EventHandler(this.stockDeArtículosToolStripMenuItem_Click);
-            // 
-            // agregarLenguajeToolStripMenuItem
-            // 
-            this.agregarLenguajeToolStripMenuItem.Name = "agregarLenguajeToolStripMenuItem";
-            this.agregarLenguajeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.agregarLenguajeToolStripMenuItem.Text = "Agregar Lenguaje";
             // 
             // frmPrincipal
             // 

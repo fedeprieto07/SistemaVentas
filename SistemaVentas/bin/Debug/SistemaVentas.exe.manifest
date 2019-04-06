@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ArquitecturaBase.dll" size="6144">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ArquitecturaBase.dll" size="6656">
       <assemblyIdentity name="ArquitecturaBase" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>igjWdNuuJGjHQ3E6ubbZDYsb6kUEIQx5so9nV1yICc0=</dsig:DigestValue>
+        <dsig:DigestValue>/Z3IicOxMTktxrbd3hDyGX+AI9jmxqBBcMT5Klkqllg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -534,14 +534,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Presentacion.exe" size="289792">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Presentacion.exe" size="290816">
       <assemblyIdentity name="Presentacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>z7cvamsDOWtIIQoINIZUg0h9DI5SvWSIkRhLBQho/ac=</dsig:DigestValue>
+        <dsig:DigestValue>w9mh8/Fqi6EUSzT+8CncEo1BS6abXNP0G1zCXQdgXPQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

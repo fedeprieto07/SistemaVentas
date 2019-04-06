@@ -321,4 +321,7 @@
   <data name="Total de Registros" xml:space="preserve">
     <value>Total Entrys</value>
   </data>
+  <data name="Agregar Lenguaje" xml:space="preserve">
+    <value>Add new language</value>
+  </data>
 </root>

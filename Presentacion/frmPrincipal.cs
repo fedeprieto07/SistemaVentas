@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ArquitecturaBase;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +17,7 @@ namespace Presentacion
     {
         List<Control> ctrl = new List<Control>();
         List<ToolStripMenuItem> allItems = new List<ToolStripMenuItem>();
-        
+
         private int childFormNumber = 0;
 
         public string Idtrabajador = "";
@@ -29,12 +30,12 @@ namespace Presentacion
         {
 
             InitializeComponent();
-            
+
 
 
         }
 
-      
+
 
 
         private void artículosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -71,7 +72,7 @@ namespace Presentacion
 
 
 
-           
+
 
         }
         public IEnumerable<Control> GetAll(Control control)
@@ -138,6 +139,7 @@ namespace Presentacion
             allItems.Add(indexToolStripMenuItem);
             allItems.Add(aboutToolStripMenuItem);
             allItems.Add(comprasPorFechasToolStripMenuItem);
+            allItems.Add(agregarLenguajeToolStripMenuItem);
 
         }
 
@@ -196,10 +198,10 @@ namespace Presentacion
 
         private void ingresosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmIngreso frm =  frmIngreso.GetInstancia();
+            frmIngreso frm = frmIngreso.GetInstancia();
             frm.MdiParent = this;
             frm.idioma = idioma;
-            frm.Idtrabajador = Convert.ToInt32( Idtrabajador);
+            frm.Idtrabajador = Convert.ToInt32(Idtrabajador);
             frm.Show();
         }
 
@@ -254,33 +256,80 @@ namespace Presentacion
 
                 foreach (ToolStripMenuItem x in allItems)
                 {
-                   
+
 
 
                     if (x.Tag.ToString() == d.Key.ToString())
                     {
 
-                       
-
-                        
-                           
-                                x.Text = d.Value.ToString();
-                           
 
 
-                        }
-                    
 
+
+                        x.Text = d.Value.ToString();
 
 
 
                     }
 
+
+
+
+
+                }
+
+            }
+
+
+
+        }
+
+        private void agregarLenguajeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Traductor leng = new Traductor();
+
+            string NuevoIdioma;
+
+            NuevoIdioma = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nombre del nuevo idioma a agregar", "Agregar Idioma", "", 100, 0);
+            
+            List<String> ValueList = new List<String>();
+            int count = 0;
+            ResXResourceReader rsxr = new ResXResourceReader(@".\ingles.resx");
+
+            // Iterate through the resources and display the contents to the console.
+            foreach (DictionaryEntry d in rsxr)
+            {
+
+                string Value;
+                Value = Microsoft.VisualBasic.Interaction.InputBox("Ingrese la traduccion en "+NuevoIdioma+" de: "+ d.Key.ToString(),"Traductor", "", 100, 0);
+                ValueList.Add(Value);
+
+
+            }
+
+            using (ResXResourceWriter resx = new ResXResourceWriter(@".\"+NuevoIdioma+".resx"))
+            {
+
+                foreach (DictionaryEntry d in rsxr)
+                {
+
+                    resx.AddResource(d.Key.ToString(), ValueList[count]);
+                    count = count + 1;
+
+
                 }
 
 
 
+
             }
-        }
+
+            leng.Insertar(NuevoIdioma);
+
+            MessageBox.Show("Lenguaje creado correctamente");
+
+            }
+    }
    }
 
