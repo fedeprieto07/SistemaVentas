@@ -17,6 +17,8 @@ namespace Presentacion
         private bool IsNuevo = false;
         private bool IsEditar = false;
         Seguridad seg = new Seguridad();
+        public string idioma;
+
         public frmTrabajador()
         {
             InitializeComponent();

@@ -41,6 +41,7 @@ namespace Presentacion
         {
             frmArticulo frm = frmArticulo.GetInstancia();
             frm.MdiParent = this;
+            frm.idioma = idioma;
             frm.Show();
         }
 
@@ -56,6 +57,7 @@ namespace Presentacion
         {
             frmCategoria frm = new frmCategoria();
             frm.MdiParent = this;
+            frm.idioma = idioma;
             frm.Show();
 
         }
@@ -82,6 +84,7 @@ namespace Presentacion
         {
             frmPresentacion frm = new frmPresentacion();
             frm.MdiParent = this;
+            frm.idioma = idioma;
             frm.Show();
         }
 
@@ -89,6 +92,7 @@ namespace Presentacion
         {
             frmProveedor frm = new frmProveedor();
             frm.MdiParent = this;
+            frm.idioma = idioma;
             frm.Show();
         }
 
@@ -96,6 +100,7 @@ namespace Presentacion
         {
             frmTrabajador frm = new frmTrabajador();
             frm.MdiParent = this;
+            frm.idioma = idioma;
             frm.Show();
         }
 
@@ -103,6 +108,7 @@ namespace Presentacion
         {
             frmCliente frm = new frmCliente();
             frm.MdiParent = this;
+            frm.idioma = idioma;
             frm.Show();
         }
 
@@ -122,13 +128,16 @@ namespace Presentacion
             allItems.Add(MnuMantenimiento);
             allItems.Add(trabajadoresToolStripMenuItem);
             allItems.Add(MnuConsultas);
+            allItems.Add(MnuCompras);
             allItems.Add(ventasPorFechasToolStripMenuItem);
             allItems.Add(comprasPorFechasToolStripMenuItem);
             allItems.Add(stockDeArtículosToolStripMenuItem);
             allItems.Add(MnuHerramientas);
             allItems.Add(optionsToolStripMenuItem);
-
-
+            allItems.Add(helpMenu);
+            allItems.Add(indexToolStripMenuItem);
+            allItems.Add(aboutToolStripMenuItem);
+            allItems.Add(comprasPorFechasToolStripMenuItem);
 
         }
 
@@ -189,6 +198,7 @@ namespace Presentacion
         {
             frmIngreso frm =  frmIngreso.GetInstancia();
             frm.MdiParent = this;
+            frm.idioma = idioma;
             frm.Idtrabajador = Convert.ToInt32( Idtrabajador);
             frm.Show();
         }
@@ -206,6 +216,7 @@ namespace Presentacion
         {
             consultas.frmConsulta_Stockcs frm = new consultas.frmConsulta_Stockcs();
             frm.MdiParent = this;
+            frm.idioma = idioma;
             frm.Show();
         }
 
@@ -214,6 +225,7 @@ namespace Presentacion
             consultas.frmConsultaCompras frm = new consultas.frmConsultaCompras();
             frm.MdiParent = this;
             frm.Show();
+            frm.idioma = idioma;
             frm.Idtrabajador = Convert.ToInt32(this.Idtrabajador);
         }
 
@@ -222,6 +234,7 @@ namespace Presentacion
             consultas.frmConsultaVentas frm = new consultas.frmConsultaVentas();
             frm.MdiParent = this;
             frm.Show();
+            frm.idioma = idioma;
             frm.Idtrabajador = Convert.ToInt32(this.Idtrabajador);
         }
 
@@ -241,6 +254,8 @@ namespace Presentacion
 
                 foreach (ToolStripMenuItem x in allItems)
                 {
+                   
+
 
                     if (x.Tag.ToString() == d.Key.ToString())
                     {

@@ -262,11 +262,12 @@
             // 
             // btnBuscarCategoria
             // 
-            this.btnBuscarCategoria.Location = new System.Drawing.Point(520, 56);
+            this.btnBuscarCategoria.Location = new System.Drawing.Point(519, 54);
             this.btnBuscarCategoria.Margin = new System.Windows.Forms.Padding(2);
             this.btnBuscarCategoria.Name = "btnBuscarCategoria";
-            this.btnBuscarCategoria.Size = new System.Drawing.Size(60, 25);
+            this.btnBuscarCategoria.Size = new System.Drawing.Size(60, 21);
             this.btnBuscarCategoria.TabIndex = 18;
+            this.btnBuscarCategoria.Tag = "Buscar";
             this.btnBuscarCategoria.Text = "Buscar";
             this.btnBuscarCategoria.UseVisualStyleBackColor = true;
             this.btnBuscarCategoria.Click += new System.EventHandler(this.btnBuscarCategoria_Click);

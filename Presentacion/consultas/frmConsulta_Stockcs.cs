@@ -14,6 +14,7 @@ namespace Presentacion.consultas
 {
     public partial class frmConsulta_Stockcs : Form
     {
+        public string idioma;
         public frmConsulta_Stockcs()
         {
             InitializeComponent();

@@ -10,16 +10,50 @@ using System.Windows.Forms;
 using Entidades;
 using System.Data;
 using Negocio;
+using System.Resources;
+using System.Collections;
 
 namespace Presentacion
 {
     public partial class frmArticulo : Form
     {
         private bool IsNuevo = false;
-
+        public string idioma;
         private bool IsEditar = false;
+        List<Control> ctrl = new List<Control>();
+        List<TabPage> allItems = new List<TabPage>();
+
 
         private static frmArticulo _Instancia;
+
+
+        private void ListarControles()
+        {
+            allItems.Add(tabPage1);
+            allItems.Add(tabPage2);
+
+            ctrl.Add(label1);
+            ctrl.Add(chkEliminar);
+            ctrl.Add(btnBuscar);
+            ctrl.Add(btnEliminar);
+            ctrl.Add(btnBuscarCategoria);
+            ctrl.Add(btnGuardar);
+            ctrl.Add(btnEditar);
+            ctrl.Add(btnCancelar);
+            ctrl.Add(btnNuevo);
+            ctrl.Add(label2);
+            ctrl.Add(groupBox1);
+            ctrl.Add(label3);
+            ctrl.Add(label6);
+            ctrl.Add(label5);
+            ctrl.Add(label8);
+            ctrl.Add(label4);
+            ctrl.Add(label7);
+
+
+        }
+
+
 
         public static frmArticulo GetInstancia()
         {
@@ -149,6 +183,9 @@ namespace Presentacion
             this.Habilitar(false);
             this.Botones();
             
+            lenguaje(idioma);
+
+
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -348,5 +385,66 @@ namespace Presentacion
             _Instancia = null;
 
         }
+
+
+        private void lenguaje(string idioma)
+        {
+
+            ResXResourceReader rsxr = new ResXResourceReader(@".\" + idioma + ".resx");
+            ListarControles();
+            // Iterate through the resources and display the contents to the console.
+            foreach (DictionaryEntry d in rsxr)
+            {
+
+                foreach (TabPage x in allItems) {
+
+                    if (x.Tag.ToString() == d.Key.ToString())
+                    {
+
+
+
+
+
+                        x.Text = d.Value.ToString();
+
+
+
+                    }
+
+
+                }
+
+
+                foreach (Control x in ctrl)
+                {
+
+
+
+                    if (x.Tag.ToString() == d.Key.ToString())
+                    {
+
+
+
+
+
+                        x.Text = d.Value.ToString();
+
+
+
+                    }
+
+
+
+
+
+                }
+
+            }
+
+
+
+        }
     }
+
 }
+

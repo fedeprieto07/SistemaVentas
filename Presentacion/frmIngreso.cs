@@ -18,7 +18,8 @@ namespace Presentacion
         private bool IsNuevo;
         private DataTable dtDetalle;
         private decimal totalPagado = 0;
-        
+        public string idioma;
+
         private static frmIngreso _instancia;
         Bitacora bit = new Bitacora();
         public static frmIngreso GetInstancia()

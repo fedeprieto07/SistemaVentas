@@ -14,6 +14,7 @@ namespace Presentacion
 {
     public partial class frmVistaArticulo_Venta : Form
     {
+        public string idioma;
         public frmVistaArticulo_Venta()
         {
             InitializeComponent();

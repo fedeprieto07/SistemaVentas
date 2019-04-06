@@ -14,6 +14,7 @@ namespace Presentacion.consultas
 {
     public partial class frmConsultaVentas : Form
     {
+        public string idioma;
         private DataTable dtDetalle;
         private bool IsNuevo = false;
         public int Idtrabajador;

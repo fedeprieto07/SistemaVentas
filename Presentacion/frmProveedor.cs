@@ -15,6 +15,7 @@ namespace Presentacion
     {
         private bool IsNuevo = false;
         private bool IsEditar = false;
+        public string idioma;
 
         public frmProveedor()
         {

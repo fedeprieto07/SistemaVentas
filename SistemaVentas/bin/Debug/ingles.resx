@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Sistema" xml:space="preserve">
+    <value>System</value>
+  </data>
   <data name="Acceso al sistema" xml:space="preserve">
-    <value>System Access</value>
+    <value>Access to the system</value>
+  </data>
+  <data name="Ingresar" xml:space="preserve">
+    <value>Enter</value>
   </data>
   <data name="Usuario:" xml:space="preserve">
     <value>User:</value>
@@ -126,37 +132,190 @@
   <data name="Contrasena:" xml:space="preserve">
     <value>Password:</value>
   </data>
-  <data name="Ingresar" xml:space="preserve">
-    <value>Log In</value>
-  </data>
   <data name="Salir" xml:space="preserve">
-    <value>Exit</value>
-  </data>
-  <data name="Sistema" xml:space="preserve">
-    <value>System Access</value>
+    <value>Go out</value>
   </data>
   <data name="Almacen" xml:space="preserve">
     <value>Warehouse</value>
   </data>
+  <data name="Articulos" xml:space="preserve">
+    <value>Articles</value>
+  </data>
+  <data name="Categorias" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="Presentaciones" xml:space="preserve">
+    <value>Presentations</value>
+  </data>
+  <data name="Ventas por Fechas" xml:space="preserve">
+    <value>Sales by Dates</value>
+  </data>
+  <data name="Compras por Fechas" xml:space="preserve">
+    <value>Shopping By Dates</value>
+  </data>
+  <data name="Stock de Articulos" xml:space="preserve">
+    <value>Stock of Items</value>
+  </data>
   <data name="Compras" xml:space="preserve">
     <value>Purchases</value>
+  </data>
+  <data name="Ingresos" xml:space="preserve">
+    <value>Income</value>
+  </data>
+  <data name="Proveedores" xml:space="preserve">
+    <value>Suppliers</value>
   </data>
   <data name="Ventas" xml:space="preserve">
     <value>Sales</value>
   </data>
+  <data name="Clientes" xml:space="preserve">
+    <value>customers</value>
+  </data>
   <data name="Mantenimiento" xml:space="preserve">
     <value>Maintenance</value>
   </data>
-  <data name="Consultas" xml:space="preserve">
-    <value>Queries</value>
+  <data name="Trabajadores" xml:space="preserve">
+    <value>Workers</value>
   </data>
   <data name="Herramientas" xml:space="preserve">
     <value>Tools</value>
   </data>
+  <data name="Base de datos" xml:space="preserve">
+    <value>Database</value>
+  </data>
   <data name="Ayuda" xml:space="preserve">
     <value>Help</value>
   </data>
-  <data name="Principal" xml:space="preserve">
-    <value>Main</value>
+  <data name="Indice" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="Acerca de" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Nombre:" xml:space="preserve">
+    <value>First name:</value>
+  </data>
+  <data name="Eliminar" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Buscar" xml:space="preserve">
+    <value>Search for</value>
+  </data>
+  <data name="Listado" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="Codigo:" xml:space="preserve">
+    <value>Code:</value>
+  </data>
+  <data name="Codigo Ventas:" xml:space="preserve">
+    <value>Sales Code:</value>
+  </data>
+  <data name="Descripcion:" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="Categoria:" xml:space="preserve">
+    <value>Category:</value>
+  </data>
+  <data name="Presentacion:" xml:space="preserve">
+    <value>Presentation:</value>
+  </data>
+  <data name="Nuevo" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="Guardar" xml:space="preserve">
+    <value>save</value>
+  </data>
+  <data name="Editar" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Cancelar" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Sexo:" xml:space="preserve">
+    <value>Sex:</value>
+  </data>
+  <data name="Tipo Documento:" xml:space="preserve">
+    <value>Document Type:</value>
+  </data>
+  <data name="Direccion:" xml:space="preserve">
+    <value>Address:</value>
+  </data>
+  <data name="Telefono:" xml:space="preserve">
+    <value>Telephone:</value>
+  </data>
+  <data name="Apellidos:" xml:space="preserve">
+    <value>Surnames:</value>
+  </data>
+  <data name="Fecha Nacimiento:" xml:space="preserve">
+    <value>Birth date:</value>
+  </data>
+  <data name="Ingresos Almacen" xml:space="preserve">
+    <value>Revenue Warehouse</value>
+  </data>
+  <data name="Comprobante:" xml:space="preserve">
+    <value>Voucher:</value>
+  </data>
+  <data name="Articulo:" xml:space="preserve">
+    <value>Article:</value>
+  </data>
+  <data name="Stock Inicial:" xml:space="preserve">
+    <value>Initial stock:</value>
+  </data>
+  <data name="B" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="Proveedor:" xml:space="preserve">
+    <value>Provider:</value>
+  </data>
+  <data name="Numero:" xml:space="preserve">
+    <value>Number:</value>
+  </data>
+  <data name="Precio Compra:" xml:space="preserve">
+    <value>Purchase Price:</value>
+  </data>
+  <data name="Precio Venta:" xml:space="preserve">
+    <value>Sale price:</value>
+  </data>
+  <data name="Fecha:" xml:space="preserve">
+    <value>Date:</value>
+  </data>
+  <data name="IVA:" xml:space="preserve">
+    <value>IVA:</value>
+  </data>
+  <data name="Fecha Prod:" xml:space="preserve">
+    <value>Prod Date:</value>
+  </data>
+  <data name="Fecha Venc:" xml:space="preserve">
+    <value>Venc Date:</value>
+  </data>
+  <data name="Total Pagado" xml:space="preserve">
+    <value>Total Paid</value>
+  </data>
+  <data name="Razon Social:" xml:space="preserve">
+    <value>Business name:</value>
+  </data>
+  <data name="Sector Comercial:" xml:space="preserve">
+    <value>Commercial section:</value>
+  </data>
+  <data name="DNI:" xml:space="preserve">
+    <value>DNI:</value>
+  </data>
+  <data name="Acceso:" xml:space="preserve">
+    <value>Access:</value>
+  </data>
+  <data name="Fecha Inicio:" xml:space="preserve">
+    <value>Start date:</value>
+  </data>
+  <data name="Fecha Fin:" xml:space="preserve">
+    <value>End date:</value>
+  </data>
+  <data name="Comprobante" xml:space="preserve">
+    <value>Voucher</value>
+  </data>
+  <data name="Cantidad:" xml:space="preserve">
+    <value>Quantity:</value>
+  </data>
+  <data name="Consultas" xml:space="preserve">
+    <value>Queries</value>
   </data>
 </root>
