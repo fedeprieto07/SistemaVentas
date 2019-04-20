@@ -88,8 +88,8 @@ namespace Datos22
 
                 SqlParameter ParAcceso = new SqlParameter();
                 ParAcceso.ParameterName = "@acceso";
-                ParAcceso.SqlDbType = SqlDbType.VarChar;
-                ParAcceso.Size = 50;
+                ParAcceso.SqlDbType = SqlDbType.Int;
+             
                 ParAcceso.Value = Trabajador.Acceso;
                 SqlCmd.Parameters.Add(ParAcceso);
 

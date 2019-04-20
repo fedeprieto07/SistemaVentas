@@ -15,7 +15,7 @@ namespace Entidades
         private string _Direccion;
         private string _Telefono;
         private string _Email;
-        private string _Acceso;
+        private int _Acceso;
         private string _Usuario;
         private string _Password;
         private string _TextoBuscar;
@@ -41,7 +41,7 @@ namespace Entidades
             set { _Usuario = value; }
         }
 
-        public string Acceso
+        public int Acceso
         {
             get { return _Acceso; }
             set { _Acceso = value; }
@@ -113,7 +113,7 @@ namespace Entidades
 
         public Trabajador(int idtrabajador, string nombre, string apellidos, string sexo,
             DateTime fecha_nacimiento, string num_documento, string direccion, string telefono,
-            string email, string acceso, string usuario, string password, string textobuscar)
+            string email, int acceso, string usuario, string password, string textobuscar)
         {
             this.Idtrabajador = idtrabajador;
             this.Nombre = nombre;

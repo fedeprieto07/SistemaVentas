@@ -11,7 +11,7 @@ namespace Negocio
     {
         public static string Insertar(string nombre, string apellidos, string sexo,
             DateTime fecha_nacimiento, string num_documento,
-            string direccion, string telefono, string email, string acceso,
+            string direccion, string telefono, string email, int acceso,
             string usuario, string password)
         {
             Trabajador Obj = new Trabajador();
@@ -35,7 +35,7 @@ namespace Negocio
         public static string Editar(int idtrabajador, string nombre, string apellidos,
             string sexo,
             DateTime fecha_nacimiento, string num_documento,
-            string direccion, string telefono, string email, string acceso, string usuario,
+            string direccion, string telefono, string email, int acceso, string usuario,
             string password)
         {
             Trabajador Obj = new Trabajador();

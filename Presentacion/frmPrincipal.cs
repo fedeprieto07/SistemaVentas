@@ -25,6 +25,7 @@ namespace Presentacion
         public string Nombre = "";
         public string Acceso = "";
         public string idioma = "";
+        public List<String> Lista_Politicas = new List<String>();
 
         public frmPrincipal()
         {
@@ -139,61 +140,36 @@ namespace Presentacion
             allItems.Add(indexToolStripMenuItem);
             allItems.Add(aboutToolStripMenuItem);
             allItems.Add(comprasPorFechasToolStripMenuItem);
-            allItems.Add(agregarLenguajeToolStripMenuItem);
+            allItems.Add(agregarLenguajeToolStripMenuItem1);
 
         }
 
         private void GestionUsuario()
         {
-            //COntrolar los accesos
-            if (Acceso == "Administrador")
+            this.MnuAlmacen.Enabled = false;
+            this.MnuCompras.Enabled = false;
+            this.MnuVentas.Enabled = false;
+            this.MnuMantenimiento.Enabled = false;
+            this.MnuConsultas.Enabled = false;
+            this.MnuHerramientas.Enabled = false;
+            this.TsCompras.Enabled = false;
+            this.TsVentas.Enabled = false;
+            this.MnuSistema.Enabled = false;
+
+            foreach (var politica in Lista_Politicas)
             {
-                this.MnuAlmacen.Enabled = true;
-                this.MnuCompras.Enabled = true;
-                this.MnuVentas.Enabled = true;
-                this.MnuMantenimiento.Enabled = true;
-                this.MnuConsultas.Enabled = true;
-                this.MnuHerramientas.Enabled = true;
-                this.TsCompras.Enabled = true;
-                this.TsVentas.Enabled = true;
+                if (politica == "politica_almacen") { this.MnuAlmacen.Enabled = true; }
+                if (politica == "politica_compras") { this.MnuCompras.Enabled = true; }
+                if (politica == "politica_ventas") { this.MnuVentas.Enabled = true; }
+                if (politica == "politica_mantenimiento") { this.MnuMantenimiento.Enabled = true; }
+                if (politica == "politica_consultas") { this.MnuConsultas.Enabled = true; }
+                if (politica == "politica_ayuda") { this.helpMenu.Enabled = true; }
+                if (politica == "politica_sistema") { this.MnuSistema.Enabled = true; }
 
             }
-            else if (Acceso == "Vendedor")
-            {
-                this.MnuAlmacen.Enabled = false;
-                this.MnuCompras.Enabled = false;
-                this.MnuVentas.Enabled = true;
-                this.MnuMantenimiento.Enabled = false;
-                this.MnuConsultas.Enabled = true;
-                this.MnuHerramientas.Enabled = true;
-                this.TsCompras.Enabled = false;
-                this.TsVentas.Enabled = true;
 
-            }
-            else if (Acceso == "Almacenero")
-            {
-                this.MnuAlmacen.Enabled = true;
-                this.MnuCompras.Enabled = true;
-                this.MnuVentas.Enabled = false;
-                this.MnuMantenimiento.Enabled = false;
-                this.MnuConsultas.Enabled = true;
-                this.MnuHerramientas.Enabled = true;
-                this.TsCompras.Enabled = true;
-                this.TsVentas.Enabled = false;
 
-            }
-            else
-            {
-                this.MnuAlmacen.Enabled = false;
-                this.MnuCompras.Enabled = false;
-                this.MnuVentas.Enabled = false;
-                this.MnuMantenimiento.Enabled = false;
-                this.MnuConsultas.Enabled = false;
-                this.MnuHerramientas.Enabled = false;
-                this.TsCompras.Enabled = false;
-                this.TsVentas.Enabled = false;
 
-            }
         }
 
         private void ingresosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -287,12 +263,18 @@ namespace Presentacion
         private void agregarLenguajeToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+
+
+        }
+
+        private void agregarLenguajeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
             Traductor leng = new Traductor();
 
             string NuevoIdioma;
 
             NuevoIdioma = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nombre del nuevo idioma a agregar", "Agregar Idioma", "", 100, 0);
-            
+
             List<String> ValueList = new List<String>();
             int count = 0;
             ResXResourceReader rsxr = new ResXResourceReader(@".\ingles.resx");
@@ -302,13 +284,13 @@ namespace Presentacion
             {
 
                 string Value;
-                Value = Microsoft.VisualBasic.Interaction.InputBox("Ingrese la traduccion en "+NuevoIdioma+" de: "+ d.Key.ToString(),"Traductor", "", 100, 0);
+                Value = Microsoft.VisualBasic.Interaction.InputBox("Ingrese la traduccion en " + NuevoIdioma + " de: " + d.Key.ToString(), "Traductor", "", 100, 0);
                 ValueList.Add(Value);
 
 
             }
 
-            using (ResXResourceWriter resx = new ResXResourceWriter(@".\"+NuevoIdioma+".resx"))
+            using (ResXResourceWriter resx = new ResXResourceWriter(@".\" + NuevoIdioma + ".resx"))
             {
 
                 foreach (DictionaryEntry d in rsxr)
@@ -329,7 +311,9 @@ namespace Presentacion
 
             MessageBox.Show("Lenguaje creado correctamente");
 
-            }
+        }
+    
+    
     }
    }
 

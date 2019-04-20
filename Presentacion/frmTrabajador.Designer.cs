@@ -69,10 +69,10 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label14 = new System.Windows.Forms.Label();
             this.cbBuscar = new System.Windows.Forms.ComboBox();
             this.chkEliminar = new System.Windows.Forms.CheckBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -271,14 +271,11 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Tag = "Trabajadores";
             this.groupBox1.Text = "Trabajadores";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // cbAcceso
             // 
             this.cbAcceso.FormattingEnabled = true;
-            this.cbAcceso.Items.AddRange(new object[] {
-            "Administrador",
-            "Vendedor",
-            "Almacenero"});
             this.cbAcceso.Location = new System.Drawing.Point(85, 223);
             this.cbAcceso.Margin = new System.Windows.Forms.Padding(2);
             this.cbAcceso.Name = "cbAcceso";
@@ -564,6 +561,16 @@
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(395, 67);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(41, 13);
+            this.label14.TabIndex = 9;
+            this.label14.Tag = "Total de Registros";
+            this.label14.Text = "label14";
+            // 
             // cbBuscar
             // 
             this.cbBuscar.FormattingEnabled = true;
@@ -600,16 +607,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(631, 353);
             this.tabControl1.TabIndex = 10;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(395, 67);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(41, 13);
-            this.label14.TabIndex = 9;
-            this.label14.Tag = "Total de Registros";
-            this.label14.Text = "label14";
             // 
             // frmTrabajador
             // 

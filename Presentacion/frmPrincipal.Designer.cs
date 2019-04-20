@@ -62,6 +62,7 @@
             this.ventasPorFechasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comprasPorFechasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stockDeArtículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarLenguajeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -120,6 +121,7 @@
             this.agregarLenguajeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.agregarLenguajeToolStripMenuItem.Tag = "Agregar Lenguaje";
             this.agregarLenguajeToolStripMenuItem.Text = "Agregar Lenguaje";
+            this.agregarLenguajeToolStripMenuItem.Visible = false;
             this.agregarLenguajeToolStripMenuItem.Click += new System.EventHandler(this.agregarLenguajeToolStripMenuItem_Click);
             // 
             // toolStrip
@@ -292,7 +294,8 @@
             // MnuMantenimiento
             // 
             this.MnuMantenimiento.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.trabajadoresToolStripMenuItem});
+            this.trabajadoresToolStripMenuItem,
+            this.agregarLenguajeToolStripMenuItem1});
             this.MnuMantenimiento.Name = "MnuMantenimiento";
             this.MnuMantenimiento.Size = new System.Drawing.Size(101, 20);
             this.MnuMantenimiento.Tag = "Mantenimiento";
@@ -301,7 +304,7 @@
             // trabajadoresToolStripMenuItem
             // 
             this.trabajadoresToolStripMenuItem.Name = "trabajadoresToolStripMenuItem";
-            this.trabajadoresToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.trabajadoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.trabajadoresToolStripMenuItem.Tag = "Trabajadores";
             this.trabajadoresToolStripMenuItem.Text = "Trabajadores";
             this.trabajadoresToolStripMenuItem.Click += new System.EventHandler(this.trabajadoresToolStripMenuItem_Click);
@@ -340,6 +343,14 @@
             this.stockDeArtículosToolStripMenuItem.Tag = "Stock de Articulos";
             this.stockDeArtículosToolStripMenuItem.Text = "Stock de Artículos";
             this.stockDeArtículosToolStripMenuItem.Click += new System.EventHandler(this.stockDeArtículosToolStripMenuItem_Click);
+            // 
+            // agregarLenguajeToolStripMenuItem1
+            // 
+            this.agregarLenguajeToolStripMenuItem1.Name = "agregarLenguajeToolStripMenuItem1";
+            this.agregarLenguajeToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.agregarLenguajeToolStripMenuItem1.Tag = "Agregar Lenguaje";
+            this.agregarLenguajeToolStripMenuItem1.Text = "Agregar lenguaje";
+            this.agregarLenguajeToolStripMenuItem1.Click += new System.EventHandler(this.agregarLenguajeToolStripMenuItem1_Click);
             // 
             // frmPrincipal
             // 
@@ -395,5 +406,6 @@
         private System.Windows.Forms.ToolStripMenuItem comprasPorFechasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stockDeArtículosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarLenguajeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agregarLenguajeToolStripMenuItem1;
     }
 }

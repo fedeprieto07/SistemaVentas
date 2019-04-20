@@ -34,9 +34,19 @@ namespace Presentacion
 
         }
 
+        private void LlenarComboPresentacion()
+        {
+            accesos acc = new accesos();
+            cbAcceso.DataSource = acc.Mostrar();
+            cbAcceso.ValueMember = "id_acceso";
+            cbAcceso.DisplayMember = "Nombre_acceso";
+
+        }
+
         private void frmTrabajador_Load(object sender, EventArgs e)
         {
             lenguaje(idioma);
+            LlenarComboPresentacion();
             this.Top = 0;
             this.Left = 0;
             this.Mostrar();
@@ -216,6 +226,7 @@ namespace Presentacion
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+
             this.IsNuevo = true;
             this.IsEditar = false;
             this.Botones();
@@ -243,6 +254,10 @@ namespace Presentacion
                 }
                 else
                 {
+                    int id_acceso;
+                    accesos acc = new accesos();
+                    id_acceso =acc.get_id_acceso(cbAcceso.Text);
+
                     if (this.IsNuevo)
                     {
                         //Vamos a insertar un Trabajador 
@@ -250,7 +265,7 @@ namespace Presentacion
                         this.txtApellidos.Text.Trim().ToUpper(), cbSexo.Text,
                         dtFecha_Nacimiento.Value,
                         txtNum_Documento.Text, txtDireccion.Text,
-                        txtTelefono.Text, txtEmail.Text, cbAcceso.Text, txtUsuario.Text, seg.encriptar(txtPassword.Text));
+                        txtTelefono.Text, txtEmail.Text, id_acceso, txtUsuario.Text, seg.encriptar(txtPassword.Text));
 
                     }
                     else
@@ -260,7 +275,7 @@ namespace Presentacion
                         this.txtApellidos.Text.Trim().ToUpper(), cbSexo.Text,
                         dtFecha_Nacimiento.Value,
                         txtNum_Documento.Text, txtDireccion.Text,
-                        txtTelefono.Text, txtEmail.Text, cbAcceso.Text, txtUsuario.Text, seg.encriptar(txtPassword.Text));
+                        txtTelefono.Text, txtEmail.Text, id_acceso, txtUsuario.Text, seg.encriptar(txtPassword.Text));
                     }
                     //Si la respuesta fue OK, fue porque se modifico 
                     //o inserto el Cliente
@@ -314,6 +329,7 @@ namespace Presentacion
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+   
             this.IsNuevo = false;
             this.IsEditar = false;
             this.Botones();
@@ -323,6 +339,9 @@ namespace Presentacion
 
         private void dataListado_DoubleClick(object sender, EventArgs e)
         {
+            accesos acc = new accesos();
+            string nombre_acceso = acc.get_nombre_acceso(Convert.ToInt32( this.dataListado.CurrentRow.Cells["acceso"].Value));
+            
             this.txtIdtrabajador.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["idtrabajador"].Value);
             this.txtNombre.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["nombre"].Value);
             this.txtApellidos.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["apellidos"].Value);
@@ -332,7 +351,7 @@ namespace Presentacion
             this.txtDireccion.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["direccion"].Value);
             this.txtTelefono.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["telefono"].Value);
             this.txtEmail.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["email"].Value);
-            this.cbAcceso.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["acceso"].Value);
+            this.cbAcceso.Text = Convert.ToString(nombre_acceso);
             this.txtUsuario.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["usuario"].Value);
             this.txtPassword.Text = Convert.ToString(this.dataListado.CurrentRow.Cells["password"].Value);
 
@@ -422,6 +441,11 @@ namespace Presentacion
             }
 
 
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
 
         }
     }

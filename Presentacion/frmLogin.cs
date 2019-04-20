@@ -52,12 +52,19 @@ namespace Presentacion
             }
             else
             {
+                List<String> Lista_accesos = new List<String>();
+
                 frmPrincipal frm = new frmPrincipal();
                 frm.Idtrabajador = Datos.Rows[0][0].ToString();
                 frm.Apellidos = Datos.Rows[0][1].ToString();
                 frm.Nombre = Datos.Rows[0][2].ToString();
                 frm.Acceso = Datos.Rows[0][3].ToString();
                 frm.idioma = idioma;
+                accesos acc = new accesos();
+                Lista_accesos = acc.list_accesps(frm.Idtrabajador);
+                frm.Lista_Politicas = Lista_accesos;
+              
+
                 bit.logger("el empleado "+ Datos.Rows[0][2].ToString()+" "+ Datos.Rows[0][1].ToString() + " se logueo al sistema" , 1);
                 frm.Show();
                 this.Hide();
