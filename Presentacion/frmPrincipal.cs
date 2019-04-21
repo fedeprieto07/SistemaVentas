@@ -141,6 +141,7 @@ namespace Presentacion
             allItems.Add(aboutToolStripMenuItem);
             allItems.Add(comprasPorFechasToolStripMenuItem);
             allItems.Add(agregarLenguajeToolStripMenuItem1);
+            allItems.Add(administrarAccesosToolStripMenuItem);
 
         }
 
@@ -202,18 +203,20 @@ namespace Presentacion
         {
             consultas.frmConsultaCompras frm = new consultas.frmConsultaCompras();
             frm.MdiParent = this;
-            frm.Show();
             frm.idioma = idioma;
             frm.Idtrabajador = Convert.ToInt32(this.Idtrabajador);
+            frm.Show();
+
         }
 
         private void ventasPorFechasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             consultas.frmConsultaVentas frm = new consultas.frmConsultaVentas();
-            frm.MdiParent = this;
-            frm.Show();
             frm.idioma = idioma;
             frm.Idtrabajador = Convert.ToInt32(this.Idtrabajador);
+            frm.MdiParent = this;
+            frm.Show();
+
         }
 
         private void MnuVentas_Click(object sender, EventArgs e)
@@ -274,6 +277,11 @@ namespace Presentacion
             string NuevoIdioma;
 
             NuevoIdioma = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nombre del nuevo idioma a agregar", "Agregar Idioma", "", 100, 0);
+            if (NuevoIdioma.Length == 0) {
+                MessageBox.Show("se cancelo el ingreso de nuevo idioma");
+                return;
+            }
+                
 
             List<String> ValueList = new List<String>();
             int count = 0;
@@ -286,7 +294,11 @@ namespace Presentacion
                 string Value;
                 Value = Microsoft.VisualBasic.Interaction.InputBox("Ingrese la traduccion en " + NuevoIdioma + " de: " + d.Key.ToString(), "Traductor", "", 100, 0);
                 ValueList.Add(Value);
-
+                if (Value.Length == 0)
+                {
+                    MessageBox.Show("se cancelo el ingreso de nuevo idioma");
+                    return;
+                }
 
             }
 
@@ -318,6 +330,14 @@ namespace Presentacion
             frmAccesos frm = new frmAccesos();
             frm.MdiParent = this;
             frm.idioma = idioma;
+            frm.Show();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAcercaDe frm = new frmAcercaDe();
+            frm.MdiParent = this;
+          
             frm.Show();
         }
     }

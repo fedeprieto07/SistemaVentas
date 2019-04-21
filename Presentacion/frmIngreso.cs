@@ -378,6 +378,7 @@ namespace Presentacion
         private void btnBuscarArticulo_Click(object sender, EventArgs e)
         {
             frmVistaArticulo_Ingreso vista = new frmVistaArticulo_Ingreso();
+            vista.idioma = idioma;
             vista.ShowDialog();
         }
 
@@ -484,6 +485,7 @@ namespace Presentacion
         private void btnBuscarProveedor_Click(object sender, EventArgs e)
         {
             frmVistaProveedor_Ingreso vista = new frmVistaProveedor_Ingreso();
+            vista.idioma = idioma;
             vista.ShowDialog();
 
         }

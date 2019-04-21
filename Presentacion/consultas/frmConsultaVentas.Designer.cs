@@ -62,6 +62,7 @@
             this.txtIdventa = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataListadoDetalle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
@@ -79,6 +80,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 13);
             this.label9.TabIndex = 10;
+            this.label9.Tag = "Fecha Fin:";
             this.label9.Text = "Fecha Fin:";
             // 
             // dataListado
@@ -121,10 +123,10 @@
             this.label16.Location = new System.Drawing.Point(9, 290);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(95, 13);
+            this.label16.Size = new System.Drawing.Size(77, 13);
             this.label16.TabIndex = 42;
             this.label16.Tag = "Total Pagado:";
-            this.label16.Text = "Total Pagado: S/. ";
+            this.label16.Text = "Total Pagado: ";
             // 
             // btnBuscar
             // 
@@ -135,6 +137,7 @@
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(79, 28);
             this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Tag = "Buscar";
             this.btnBuscar.Text = "&Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -163,6 +166,7 @@
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(35, 13);
             this.lblTotal.TabIndex = 6;
+            this.lblTotal.Tag = "noTRAD";
             this.lblTotal.Text = "label3";
             // 
             // txtIgv
@@ -191,9 +195,10 @@
             this.label11.Location = new System.Drawing.Point(414, 72);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(28, 13);
+            this.label11.Size = new System.Drawing.Size(27, 13);
             this.label11.TabIndex = 26;
-            this.label11.Text = "IGV:";
+            this.label11.Tag = "IVA:";
+            this.label11.Text = "IVA:";
             // 
             // txtCorrelativo
             // 
@@ -213,6 +218,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(47, 13);
             this.label8.TabIndex = 24;
+            this.label8.Tag = "Numero:";
             this.label8.Text = "Número:";
             // 
             // cbTipo_Comprobante
@@ -247,6 +253,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 0;
+            this.label2.Tag = "Fecha Inicio:";
             this.label2.Text = "Fecha Inicio:";
             // 
             // ttMensaje
@@ -266,6 +273,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.dtFecha2);
             this.tabPage1.Controls.Add(this.dtFecha1);
@@ -279,6 +287,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(707, 347);
             this.tabPage1.TabIndex = 0;
+            this.tabPage1.Tag = "Listado";
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
@@ -309,6 +318,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(707, 347);
             this.tabPage2.TabIndex = 1;
+            this.tabPage2.Tag = "Detalle";
             this.tabPage2.Text = "Detalle";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
@@ -339,6 +349,7 @@
             this.groupBox1.Size = new System.Drawing.Size(673, 315);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Tag = "Ventas";
             this.groupBox1.Text = "Ventas";
             // 
             // label10
@@ -349,6 +360,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(40, 13);
             this.label10.TabIndex = 21;
+            this.label10.Tag = "Fecha:";
             this.label10.Text = "Fecha:";
             // 
             // txtIdcliente
@@ -379,6 +391,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 13);
             this.label7.TabIndex = 15;
+            this.label7.Tag = "Cliente:";
             this.label7.Text = "Cliente:";
             // 
             // txtSerie
@@ -399,6 +412,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 13);
             this.label6.TabIndex = 10;
+            this.label6.Tag = "Comprobante:";
             this.label6.Text = "Comprobante:";
             // 
             // txtIdventa
@@ -419,6 +433,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 0;
+            this.label3.Tag = "Codigo:";
             this.label3.Text = "Código:";
             // 
             // label1
@@ -431,7 +446,18 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 29);
             this.label1.TabIndex = 18;
+            this.label1.Tag = "Ventas";
             this.label1.Text = "Ventas";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(278, 64);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 13);
+            this.label4.TabIndex = 20;
+            this.label4.Tag = "Total de Registros";
+            this.label4.Text = "Total De Registros";
             // 
             // frmConsultaVentas
             // 
@@ -492,5 +518,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolTip ttMensaje;
+        private System.Windows.Forms.Label label4;
     }
 }

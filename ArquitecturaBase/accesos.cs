@@ -33,8 +33,129 @@ namespace ArquitecturaBase
 
                 Lista.Add(dr["nombre_politica"].ToString());
             }
-
+            conexion.Close();
             return Lista;
+
+        }
+
+        public string Editar_acceso(int id, string nombre, string desc)
+        {
+            string rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Con;
+                SqlCon.Open();
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "speditar_acceso";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParIdcategoria = new SqlParameter();
+                ParIdcategoria.ParameterName = "@id_acceso";
+                ParIdcategoria.SqlDbType = SqlDbType.Int;
+                ParIdcategoria.Value = id;
+                SqlCmd.Parameters.Add(ParIdcategoria);
+
+                SqlParameter ParNombre = new SqlParameter();
+                ParNombre.ParameterName = "@nombre_acceso";
+                ParNombre.SqlDbType = SqlDbType.VarChar;
+                ParNombre.Size = 50;
+                ParNombre.Value = nombre;
+                SqlCmd.Parameters.Add(ParNombre);
+
+                SqlParameter ParDescripcion = new SqlParameter();
+                ParDescripcion.ParameterName = "@descripcion";
+                ParDescripcion.SqlDbType = SqlDbType.VarChar;
+                ParDescripcion.Size = 50;
+                ParDescripcion.Value = desc;
+                SqlCmd.Parameters.Add(ParDescripcion);
+
+
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Actualizo el Registro";
+
+
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return rpta;
+        }
+        public string Insertar_acceso(string nombre, string descripcion)
+        {
+            string rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+
+                SqlCon.ConnectionString = Con;
+                SqlCon.Open();
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spinsertar_acceso";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParIdcategoria = new SqlParameter();
+                ParIdcategoria.ParameterName = "@id_acceso";
+                ParIdcategoria.SqlDbType = SqlDbType.Int;
+                ParIdcategoria.Direction = ParameterDirection.Output;
+                SqlCmd.Parameters.Add(ParIdcategoria);
+
+                SqlParameter ParNombre = new SqlParameter();
+                ParNombre.ParameterName = "@nombre_acceso";
+                ParNombre.SqlDbType = SqlDbType.VarChar;
+                ParNombre.Size = 50;
+                ParNombre.Value = nombre;
+                SqlCmd.Parameters.Add(ParNombre);
+
+                SqlParameter ParDescripcion = new SqlParameter();
+                ParDescripcion.ParameterName = "@descripcion";
+                ParDescripcion.SqlDbType = SqlDbType.VarChar;
+                ParDescripcion.Size = 50;
+                ParDescripcion.Value = descripcion;
+                SqlCmd.Parameters.Add(ParDescripcion);
+
+
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Ingreso el Registro";
+
+
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return rpta;
+
+        }
+
+        public Boolean CheckIf_polici_exists(int acceso,int politica)
+        {
+
+            conexion_ventas.Open();
+            string query = "select COUNT (*) from accceso_politica where id_acceso = @acceso and id_politica = @politica";
+
+            SqlCommand cmd = new SqlCommand(query, conexion_ventas);
+            cmd.Parameters.AddWithValue("@acceso", acceso);
+            cmd.Parameters.AddWithValue("@politica", acceso);
+
+
+            string value = cmd.ExecuteScalar().ToString();
+
+
+            if (value == "0") {
+                return true; }
+
+            else { return false; }
+
 
         }
 
@@ -99,6 +220,8 @@ namespace ArquitecturaBase
             {
                 DtResultado = null;
             }
+
+
             return DtResultado;
 
         }

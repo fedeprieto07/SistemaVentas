@@ -378,6 +378,7 @@ namespace Presentacion
         private void btnBuscarCategoria_Click(object sender, EventArgs e)
         {
             frmVistaCategoria form = new frmVistaCategoria();
+            form.idioma = idioma;
             form.ShowDialog();
         }
 

@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
             this.dataListado = new System.Windows.Forms.DataGridView();
             this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.lblTotal = new System.Windows.Forms.Label();
             this.ttMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListado)).BeginInit();
@@ -53,6 +53,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(640, 289);
             this.tabControl1.TabIndex = 13;
+            this.tabControl1.Tag = "Listado";
             // 
             // tabPage1
             // 
@@ -65,8 +66,19 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(632, 263);
             this.tabPage1.TabIndex = 0;
+            this.tabPage1.Tag = "Listado";
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(180, 34);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(93, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Tag = "Total de Registros";
+            this.label2.Text = "Total de Registros";
             // 
             // dataListado
             // 
@@ -100,6 +112,7 @@
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(35, 13);
             this.lblTotal.TabIndex = 6;
+            this.lblTotal.Tag = "noTRAD";
             this.lblTotal.Text = "label3";
             // 
             // ttMensaje
@@ -116,20 +129,12 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(223, 29);
             this.label1.TabIndex = 12;
+            this.label1.Tag = "Stock de Artículos";
             this.label1.Text = "Stock de Artículos";
             // 
             // errorIcono
             // 
             this.errorIcono.ContainerControl = this;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(194, 34);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "label2";
             // 
             // frmConsulta_Stockcs
             // 

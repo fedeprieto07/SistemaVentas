@@ -60,7 +60,7 @@ namespace Presentacion.consultas
         {
             this.dataListado.DataSource = nVenta.Mostrar();
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text =  Convert.ToString(dataListado.Rows.Count);
         }
 
         //Método BuscarFechas
@@ -69,7 +69,7 @@ namespace Presentacion.consultas
             this.dataListado.DataSource = nVenta.BuscarFechas(this.dtFecha1.Value.ToString("dd/MM/yyyy"),
                 this.dtFecha2.Value.ToString("dd/MM/yyyy"));
             this.OcultarColumnas();
-            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataListado.Rows.Count);
+            lblTotal.Text =  Convert.ToString(dataListado.Rows.Count);
         }
 
         private void MostrarDetalle()

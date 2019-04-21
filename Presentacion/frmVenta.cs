@@ -221,6 +221,7 @@ namespace Presentacion
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
             frmVistaCliente_Venta vista = new frmVistaCliente_Venta();
+            vista.idioma = idioma;
             vista.ShowDialog();
 
         }
@@ -228,6 +229,7 @@ namespace Presentacion
         private void btnBuscarArticulo_Click(object sender, EventArgs e)
         {
             frmVistaArticulo_Venta vista = new frmVistaArticulo_Venta();
+            vista.idioma = idioma;
             vista.ShowDialog();
 
         }

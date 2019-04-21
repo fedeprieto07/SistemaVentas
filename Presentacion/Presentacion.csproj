@@ -109,6 +109,12 @@
     <Compile Include="frmAccesos.Designer.cs">
       <DependentUpon>frmAccesos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAcercaDe.Designer.cs">
+      <DependentUpon>frmAcercaDe.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAccesos.resx">
       <DependentUpon>frmAccesos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAcercaDe.resx">
+      <DependentUpon>frmAcercaDe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmArticulo.resx">
       <DependentUpon>frmArticulo.cs</DependentUpon>

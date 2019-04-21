@@ -324,4 +324,22 @@
   <data name="Agregar Lenguaje" xml:space="preserve">
     <value>Add new language</value>
   </data>
+  <data name="Accesos" xml:space="preserve">
+    <value>Access</value>
+  </data>
+  <data name="Agregar" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Administrar Accesos" xml:space="preserve">
+    <value>Access Admin</value>
+  </data>
+  <data name="Agregar Politica" xml:space="preserve">
+    <value>Add Policy</value>
+  </data>
+  <data name="Eliminar Politica" xml:space="preserve">
+    <value>Delete Policy</value>
+  </data>
+  <data name="Detalle" xml:space="preserve">
+    <value>Detail</value>
+  </data>
 </root>

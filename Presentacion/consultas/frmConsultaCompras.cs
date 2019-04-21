@@ -163,6 +163,7 @@ namespace Presentacion.consultas
             allItems.Add(tabPage2);
             ctrl.Add(label2);
             ctrl.Add(label1);
+            ctrl.Add(label4);
          
             ctrl.Add(btnBuscar);
     
