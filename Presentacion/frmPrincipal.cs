@@ -312,8 +312,14 @@ namespace Presentacion
             MessageBox.Show("Lenguaje creado correctamente");
 
         }
-    
-    
+
+        private void administrarAccesosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAccesos frm = new frmAccesos();
+            frm.MdiParent = this;
+            frm.idioma = idioma;
+            frm.Show();
+        }
     }
    }
 

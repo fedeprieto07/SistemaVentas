@@ -102,6 +102,153 @@ namespace ArquitecturaBase
             return DtResultado;
 
         }
+        public DataTable Mostrar_politicas()
+        {
+            DataTable DtResultado = new DataTable("politicas");
+            SqlConnection SqlCon = new SqlConnection();
+
+            try
+            {
+                SqlCon.ConnectionString = Con;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spmostrar_politicas";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+
+        }
+
+        public string Eliminar_acceso_politica(int acceso, int politica)
+        {
+            string rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+
+                SqlCon.ConnectionString = Con;
+                SqlCon.Open();
+
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "speliminar_acceso_politica";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParAcceso = new SqlParameter();
+                ParAcceso.ParameterName = "@id_acceso";
+                ParAcceso.SqlDbType = SqlDbType.Int;
+                ParAcceso.Value = acceso;
+                SqlCmd.Parameters.Add(ParAcceso);
+
+                SqlParameter parPolitica = new SqlParameter();
+                parPolitica.ParameterName = "@id_politica";
+                parPolitica.SqlDbType = SqlDbType.Int;
+                parPolitica.Value = politica;
+                SqlCmd.Parameters.Add(parPolitica);
+
+
+
+
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Elimino el Registro";
+
+
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return rpta;
+        }
+
+
+        public string Agregar_acceso_politica(int acceso, int politica)
+        {
+            string rpta = "";
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+
+                SqlCon.ConnectionString = Con;
+                SqlCon.Open();
+
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spinsertar_acceso_politica";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParAcceso = new SqlParameter();
+                ParAcceso.ParameterName = "@id_acceso";
+                ParAcceso.SqlDbType = SqlDbType.Int;
+                ParAcceso.Value = acceso;
+                SqlCmd.Parameters.Add(ParAcceso);
+
+                SqlParameter parPolitica = new SqlParameter();
+                parPolitica.ParameterName = "@id_politica";
+                parPolitica.SqlDbType = SqlDbType.Int;
+                parPolitica.Value = politica;
+                SqlCmd.Parameters.Add(parPolitica);
+
+
+
+
+                rpta = SqlCmd.ExecuteNonQuery() == 1 ? "OK" : "NO se Agrego el Registro";
+
+
+            }
+            catch (Exception ex)
+            {
+                rpta = ex.Message;
+            }
+            finally
+            {
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+            return rpta;
+        }
+
+
+        public DataTable Mostrar_Accesos_politicas(int id_acceso)
+        {
+            DataTable DtResultado = new DataTable("Accesos_politicas");
+            SqlConnection SqlCon = new SqlConnection();
+
+            try
+            {
+                SqlCon.ConnectionString = Con;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spmostrar_Accesos_politicas";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter id_accesos = new SqlParameter();
+                id_accesos.ParameterName = "@textobuscar";
+                id_accesos.SqlDbType = SqlDbType.Int;
+                id_accesos.Value = id_acceso;
+                SqlCmd.Parameters.Add(id_accesos);
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+
+        }
 
     }
 }

@@ -450,3 +450,4 @@ C:\Users\Samsung\Desktop\SistemaVentas\Presentacion\obj\Debug\Presentacion.appli
 C:\Users\Samsung\Desktop\SistemaVentas\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
 C:\Users\Samsung\Desktop\SistemaVentas\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\Samsung\Desktop\SistemaVentas\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\Samsung\Desktop\SistemaVentas\Presentacion\obj\Debug\Presentacion.frmAccesos.resources
