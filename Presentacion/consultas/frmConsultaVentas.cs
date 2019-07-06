@@ -20,10 +20,12 @@ namespace Presentacion.consultas
 
         List<Control> ctrl = new List<Control>();
         List<TabPage> allItems = new List<TabPage>();
+
         public string idioma;
         private DataTable dtDetalle;
         private bool IsNuevo = false;
         public int Idtrabajador;
+
         public frmConsultaVentas()
         {
             InitializeComponent();
@@ -110,48 +112,24 @@ namespace Presentacion.consultas
 
                     if (x.Tag.ToString() == d.Key.ToString())
                     {
-
-
-
-
-
                         x.Text = d.Value.ToString();
-
-
-
                     }
-
-
+                
                 }
 
 
                 foreach (Control x in ctrl)
                 {
-
-
-
+                    
                     if (x.Tag.ToString() == d.Key.ToString())
                     {
 
-
-
-
-
                         x.Text = d.Value.ToString();
-
-
 
                     }
 
-
-
-
-
                 }
-
             }
-
-
 
         }
 
@@ -161,31 +139,17 @@ namespace Presentacion.consultas
             allItems.Add(tabPage2);
             ctrl.Add(lblTotal);
             ctrl.Add(label1);
-          
             ctrl.Add(btnBuscar);
-          
-
-      
-
-    
             ctrl.Add(label2);
             ctrl.Add(groupBox1);
             ctrl.Add(label3);
-
-
             ctrl.Add(label6);
             ctrl.Add(label7);
             ctrl.Add(label8);
             ctrl.Add(label9);
             ctrl.Add(label10);
             ctrl.Add(label11);
-
             ctrl.Add(label16);
-
-       
-
-
-
         }
 
     }

@@ -212,9 +212,9 @@ namespace Presentacion
         private void ventasPorFechasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             consultas.frmConsultaVentas frm = new consultas.frmConsultaVentas();
+            frm.MdiParent = this;
             frm.idioma = idioma;
             frm.Idtrabajador = Convert.ToInt32(this.Idtrabajador);
-            frm.MdiParent = this;
             frm.Show();
 
         }
