@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.boxidioma = new System.Windows.Forms.ComboBox();
             this.BtnSalir = new System.Windows.Forms.Button();
             this.BtnIngresar = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +65,16 @@
             this.groupBox1.Tag = "Acceso al sistema";
             this.groupBox1.Text = "Acceso al Sistema";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(7, 139);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(76, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Seleccionar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // boxidioma
             // 
@@ -120,7 +130,6 @@
             this.TxtPassword.PasswordChar = '*';
             this.TxtPassword.Size = new System.Drawing.Size(212, 20);
             this.TxtPassword.TabIndex = 3;
-            this.TxtPassword.Text = "Entrada.10";
             // 
             // TxtUsuario
             // 
@@ -129,7 +138,6 @@
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(212, 20);
             this.TxtUsuario.TabIndex = 2;
-            this.TxtUsuario.Text = "fprieto";
             // 
             // label3
             // 
@@ -181,16 +189,6 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(7, 139);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(76, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Seleccionar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmLogin
             // 

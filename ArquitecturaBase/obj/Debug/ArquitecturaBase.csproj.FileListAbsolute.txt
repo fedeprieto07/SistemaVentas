@@ -32,3 +32,20 @@ C:\Users\Samsung\Desktop\SistemaVentas\ArquitecturaBase\obj\Debug\ArquitecturaBa
 C:\Users\Samsung\Desktop\SistemaVentas\ArquitecturaBase\obj\Debug\ArquitecturaBase.csproj.CopyComplete
 C:\Users\Samsung\Desktop\SistemaVentas\ArquitecturaBase\obj\Debug\ArquitecturaBase.dll
 C:\Users\Samsung\Desktop\SistemaVentas\ArquitecturaBase\obj\Debug\ArquitecturaBase.pdb
+C:\Users\Samsung\Desktop\New folder (2)\SistemaVentas\ArquitecturaBase\bin\Debug\DBas\Arq.mdf
+C:\Users\Samsung\Desktop\New folder (2)\SistemaVentas\ArquitecturaBase\bin\Debug\DBas\Arq_log.ldf
+C:\Users\Samsung\Desktop\New folder (2)\SistemaVentas\ArquitecturaBase\bin\Debug\DBas\DBventas.mdf
+C:\Users\Samsung\Desktop\New folder (2)\SistemaVentas\ArquitecturaBase\bin\Debug\DBas\DBventas_log.ldf
+C:\Users\Samsung\Desktop\New folder (2)\SistemaVentas\ArquitecturaBase\bin\Debug\ArquitecturaBase.dll
+C:\Users\Samsung\Desktop\New folder (2)\SistemaVentas\ArquitecturaBase\bin\Debug\ArquitecturaBase.pdb
+C:\Users\Samsung\Desktop\New folder (2)\SistemaVentas\ArquitecturaBase\bin\Debug\Datos22.dll
+C:\Users\Samsung\Desktop\New folder (2)\SistemaVentas\ArquitecturaBase\bin\Debug\eCryptography.dll
+C:\Users\Samsung\Desktop\New folder (2)\SistemaVentas\ArquitecturaBase\bin\Debug\Entidades.dll
+C:\Users\Samsung\Desktop\New folder (2)\SistemaVentas\ArquitecturaBase\bin\Debug\netstandard.dll
+C:\Users\Samsung\Desktop\New folder (2)\SistemaVentas\ArquitecturaBase\bin\Debug\Datos22.pdb
+C:\Users\Samsung\Desktop\New folder (2)\SistemaVentas\ArquitecturaBase\bin\Debug\Entidades.pdb
+C:\Users\Samsung\Desktop\New folder (2)\SistemaVentas\ArquitecturaBase\obj\Debug\ArquitecturaBase.csprojAssemblyReference.cache
+C:\Users\Samsung\Desktop\New folder (2)\SistemaVentas\ArquitecturaBase\obj\Debug\ArquitecturaBase.csproj.CoreCompileInputs.cache
+C:\Users\Samsung\Desktop\New folder (2)\SistemaVentas\ArquitecturaBase\obj\Debug\ArquitecturaBase.csproj.CopyComplete
+C:\Users\Samsung\Desktop\New folder (2)\SistemaVentas\ArquitecturaBase\obj\Debug\ArquitecturaBase.dll
+C:\Users\Samsung\Desktop\New folder (2)\SistemaVentas\ArquitecturaBase\obj\Debug\ArquitecturaBase.pdb
