@@ -10,9 +10,9 @@ namespace ArquitecturaBase
 {
    public class accesos
     {
-        SqlConnection conexion_ventas = new SqlConnection(@"Data Source = (local)\SQLEXPRESS; Initial Catalog = DBventas; Integrated Security = True");
-        SqlConnection conexion = new SqlConnection(@"Data Source = (local)\SQLEXPRESS; Initial Catalog = Arq; Integrated Security = True");
-        public static string Con = @"Data Source = (local)\SQLEXPRESS; Initial Catalog = DBventas; Integrated Security = True";
+        SqlConnection conexion_ventas = new SqlConnection(@"Data Source = .\SQL_UAI; Initial Catalog = DBventas; Integrated Security = True");
+        SqlConnection conexion = new SqlConnection(@"Data Source =.\SQL_UAI; Initial Catalog = Arq; Integrated Security = True");
+        public static string Con = @"Data Source =.\SQL_UAI; Initial Catalog = DBventas; Integrated Security = True";
 
         public List<String> list_accesps(string id_trabajador)
         {

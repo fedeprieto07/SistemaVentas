@@ -163,6 +163,31 @@ namespace Datos22
             }
             return rpta;
         }
+        
+
+            public DataTable MostrarBitacora()
+        {
+            DataTable DtResultado = new DataTable("ingreso");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion.CnArq;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spmostrar_Bitacora";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+
+        }
 
         public DataTable Mostrar()
         {
@@ -227,6 +252,43 @@ namespace Datos22
 
         }
 
+        public DataTable BuscarFechasBitacora(String TextoBuscar, String TextoBuscar2)
+        {
+            DataTable DtResultado = new DataTable("ingreso");
+            SqlConnection SqlCon = new SqlConnection();
+            try
+            {
+                SqlCon.ConnectionString = Conexion.CnArq;
+                SqlCommand SqlCmd = new SqlCommand();
+                SqlCmd.Connection = SqlCon;
+                SqlCmd.CommandText = "spbuscar_bitacora_fecha";
+                SqlCmd.CommandType = CommandType.StoredProcedure;
+
+                SqlParameter ParTextoBuscar = new SqlParameter();
+                ParTextoBuscar.ParameterName = "@textobuscar";
+                ParTextoBuscar.SqlDbType = SqlDbType.VarChar;
+                ParTextoBuscar.Size = 50;
+                ParTextoBuscar.Value = TextoBuscar;
+                SqlCmd.Parameters.Add(ParTextoBuscar);
+
+                SqlParameter ParTextoBuscar2 = new SqlParameter();
+                ParTextoBuscar2.ParameterName = "@textobuscar2";
+                ParTextoBuscar2.SqlDbType = SqlDbType.VarChar;
+                ParTextoBuscar2.Size = 50;
+                ParTextoBuscar2.Value = TextoBuscar2;
+                SqlCmd.Parameters.Add(ParTextoBuscar2);
+
+                SqlDataAdapter SqlDat = new SqlDataAdapter(SqlCmd);
+                SqlDat.Fill(DtResultado);
+
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+            }
+            return DtResultado;
+
+        }
 
         public DataTable MostrarDetalle(String TextoBuscar)
         {

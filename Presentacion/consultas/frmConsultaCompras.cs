@@ -188,5 +188,9 @@ namespace Presentacion.consultas
 
         }
 
+        public static implicit operator frmConsultaCompras(frmConsulta_Bitacora v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

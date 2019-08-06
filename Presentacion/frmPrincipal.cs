@@ -340,6 +340,15 @@ namespace Presentacion
           
             frm.Show();
         }
+
+        private void errorLogsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            consultas.frmConsulta_Bitacora frm = new consultas.frmConsulta_Bitacora();
+            frm.MdiParent = this;
+            frm.idioma = idioma;
+            frm.Idtrabajador = Convert.ToInt32(this.Idtrabajador);
+            frm.Show();
+        }
     }
    }
 

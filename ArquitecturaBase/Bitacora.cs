@@ -10,7 +10,7 @@ namespace ArquitecturaBase
     public class Bitacora
     {
 
-        public static string Cn = @"Data Source = (local)\SQLEXPRESS; Initial Catalog = Arq; Integrated Security = True";
+        public static string Cn = @"Data Source = .\SQL_UAI; Initial Catalog = Arq; Integrated Security = True";
         //  public static string Cn = @"Data Source =.\SQLEXPRESS; Initial Catalog = Arq; Integrated Security = True;AttachDbFileName=|datadirectory|\Arq.mdf ";
         public void logger(string Mensaje, int Nivel) { 
         SqlConnection con = new SqlConnection(Cn);

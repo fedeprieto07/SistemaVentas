@@ -74,6 +74,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="consultas\frmConsulta_Bitacora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultas\frmConsulta_Bitacora.Designer.cs">
+      <DependentUpon>frmConsulta_Bitacora.cs</DependentUpon>
+    </Compile>
     <Compile Include="consultas\frmConsultaCompras.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="consultas\frmConsultaVentas.resx">
       <DependentUpon>frmConsultaVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="consultas\frmConsulta_Bitacora.resx">
+      <DependentUpon>frmConsulta_Bitacora.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="consultas\frmConsulta_Stockcs.resx">
       <DependentUpon>frmConsulta_Stockcs.cs</DependentUpon>

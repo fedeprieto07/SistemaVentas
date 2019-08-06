@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 namespace ArquitecturaBase
 {
     public class Traductor{
-        public static string Con = @"Data Source = (local)\SQLEXPRESS; Initial Catalog = Arq; Integrated Security = True";
+        public static string Con = @"Data Source = .\SQL_UAI; Initial Catalog = Arq; Integrated Security = True";
 
         public DataTable Mostrar()
         {

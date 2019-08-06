@@ -680,3 +680,4 @@ C:\Users\Samsung\Desktop\New folder (2)\SistemaVentas\Presentacion\obj\Debug\Pre
 C:\Users\Samsung\Desktop\New folder (2)\SistemaVentas\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
 C:\Users\Samsung\Desktop\New folder (2)\SistemaVentas\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\Samsung\Desktop\New folder (2)\SistemaVentas\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\Samsung\Desktop\New folder (2)\SistemaVentas\Presentacion\obj\Debug\Presentacion.consultas.frmConsulta_Bitacora.resources

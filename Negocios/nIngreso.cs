@@ -53,7 +53,12 @@ namespace Negocio
             return new dIngreso().Mostrar();
         }
 
-   
+        public static DataTable MostrarBitacora()
+        {
+            return new dIngreso().MostrarBitacora();
+        }
+
+
 
         public static DataTable BuscarFechas(string textobuscar, string textobuscar2)
         {
@@ -61,6 +66,15 @@ namespace Negocio
 
             Ingreso Obj = new Ingreso();
             return objin.BuscarFechas(textobuscar, textobuscar2);
+        }
+
+
+        public static DataTable BuscarFechasBitacora(string textobuscar, string textobuscar2)
+        {
+            dIngreso objin = new dIngreso();
+
+            Ingreso Obj = new Ingreso();
+            return objin.BuscarFechasBitacora(textobuscar, textobuscar2);
         }
 
         public static DataTable MostrarDetalle(string textobuscar)
